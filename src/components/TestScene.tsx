@@ -13,14 +13,13 @@ export const TestScene = () => {
     >
       {(progress: number, event: SceneEvent) => (
         <div className='mx-auto overflow-hidden'>
-          <>{console.log('progress 2nd pinned', progress)}</>
-          <>{console.log('event 2nd pinned', event)}</>
           <Timeline
             totalProgress={progress}
             paused
             target={
               <p>
-                EVENT: {event.type} - PROGRESS: {progress}
+                EVENT type: {event.type} - EVENT state: {event.state} -
+                PROGRESS: {progress}
               </p>
             }
           >

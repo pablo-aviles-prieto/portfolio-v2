@@ -1,5 +1,6 @@
 import { Controller, Scene } from 'react-scrollmagic';
 import { LandingComponent } from './components/LandingComponent';
+import { TestScene } from './components/TestScene';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <br />
           <br />
           <Scene
-            duration={500}
+            duration={700}
             pin={{ pushFollowers: true }}
             triggerHook={0.5}
             // offset={125}
@@ -21,7 +22,7 @@ function App() {
             // progressEvents={true}
           >
             {(progress: number) => (
-              <div className='h-[100px]'>
+              <div className='h-[200px]'>
                 <>{console.log('progress 1st pinned', progress)}</>
                 <h1>I'm pinned to the screen!</h1>
                 <h2>Start editing to see change the magic</h2>
@@ -30,9 +31,9 @@ function App() {
           </Scene>
           <h2>Outside the scene</h2>
           <br />
-          {/* <TestScene /> */}
+          <TestScene />
         </div>
-        <h1> Bye! </h1>
+        <h1 className='my-48'> Bye! </h1>
         <br />
         <br />
         <br />
