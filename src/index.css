@@ -2,15 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.timeline-card::before {
+.timeline-card-top::before {
   content: '';
   position: absolute;
-  top: 96%;
+  top: 78%;
   left: 50%;
   transform: translateX(-50%) rotate(135deg);
   width: 10px;
   height: 10px;
   border-right: 1px solid rgb(251 191 36);
   border-top: 1px solid rgb(251 191 36);
+  background-color: rgb(71 85 105);
+}
+
+.timeline-card-bottom::before {
+  content: '';
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  transform: translateX(-50%) rotate(225deg);
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid rgb(251 191 36);
+  border-bottom: 1px solid rgb(251 191 36);
   background-color: rgb(71 85 105);
 }

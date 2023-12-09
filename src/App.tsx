@@ -1,13 +1,22 @@
 import { Controller, Scene } from 'react-scrollmagic';
 import { LandingComponent } from './components/LandingComponent';
-import { TestScene } from './components/TestScene';
-import { SceneEvent } from './interfaces/sceneEvent';
 import { Timeline, Tween } from 'react-gsap';
-import { TimelineCard } from './components/styles/TimelineCard';
-
-const TIMELINE_FLEX_GAP = 'gap-y-4';
+import { getEvenItemsFromArray } from './utils/getEvenItemsFromArray';
+import {
+  TIMELINE_SLOT_MARGIN,
+  TIMELINE_SLOT_WIDTH,
+  timelineData,
+} from './utils/const';
+import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
+import { RenderTimelineItems } from './components/RenderTimeLineItems';
 
 function App() {
+  const timelineTotalWidth =
+    (TIMELINE_SLOT_WIDTH + TIMELINE_SLOT_MARGIN) * timelineData.length - 50;
+
+  const evenTimelineData = getEvenItemsFromArray(timelineData);
+  const oddTimelineData = getOddItemsFromArray(timelineData);
+
   return (
     <div className='overflow-hidden bg-slate-700 text-slate-50'>
       <div className='h-screen'>
@@ -15,84 +24,40 @@ function App() {
       </div>
       <Controller>
         <div>
-          <br />
-          {/* <br />
-          <Scene
-            duration={700}
-            pin={{ pushFollowers: true }}
-            triggerHook={0.5}
-            // offset={125}
-            classToggle='bg-slate-400'
-            indicators={true}
-            // progressEvents={true}
-          >
-            {(progress: number, event: SceneEvent) => (
-              <div className='h-[200px]'>
-                <p>
-                  EVENT type: {event.type} - EVENT state: {event.state} -
-                  PROGRESS: {progress}
-                </p>
-                <h1>I'm pinned to the screen!</h1>
-                <h2>Start editing to see change the magic</h2>
-              </div>
-            )}
-          </Scene>
-          <h2>Outside the scene</h2>
-          <br />
-          <TestScene />
-          <br />
-          <br /> */}
           <div className='w-[1000px] mx-auto overflow-hidden'>
             <Scene
-              duration={1500}
-              triggerHook={0.3}
+              duration={5000}
+              triggerHook={0.2}
               pin={{ pushFollowers: false }}
               indicators={true}
               classToggle='overflow-hidden'
             >
               <Timeline
                 target={
-                  <div className='w-[2500px]'>
+                  <div style={{ width: `${timelineTotalWidth}px` }}>
                     <div
-                      id=''
-                      className='flex justify-between border-b-2 border-amber-700'
+                      id='timeline-top-side'
+                      className='flex border-b-2 border-amber-700'
                     >
-                      <div
-                        className={`max-w-[250px] flex flex-col justify-end ${TIMELINE_FLEX_GAP}`}
-                      >
-                        <TimelineCard>
-                          Aquí dedicaba mi vida a ser un buen profesional de la
-                          petanca
-                        </TimelineCard>
-                        <p className='text-center'>2000</p>
-                      </div>
-                      <div
-                        className={`max-w-[250px] flex flex-col ${TIMELINE_FLEX_GAP}`}
-                      >
-                        <TimelineCard>
-                          Pues era ingeniero agrícola en mis ratos libres,
-                          además de ser un buen señor fumador de anacardos
-                        </TimelineCard>
-                        <p className='text-center'>2000</p>
-                      </div>
-                      <div>2005</div>
-                      <div>2008</div>
-                      <div>2009</div>
+                      <RenderTimelineItems data={evenTimelineData} isTopSide />
                     </div>
-                    <div></div>
+                    <div id='timeline-bottom-side' className='flex'>
+                      <RenderTimelineItems
+                        data={oddTimelineData}
+                        isTopSide={false}
+                      />
+                    </div>
                   </div>
                 }
               >
-                <Tween from={{ x: 1000 }} to={{ x: -2000 }} />
+                <Tween from={{ x: 1000 }} to={{ x: -timelineTotalWidth }} />
               </Timeline>
             </Scene>
           </div>
         </div>
-        <h1 className='my-48'> Bye! </h1>
-        <br />
-        <br />
-        <br />
-        <br />
+        <h1 className='mb-72'>
+          Last works and some other things after the timeline
+        </h1>
         <br />
         <br />
         <br />
