@@ -29,8 +29,8 @@ export const TestScene = () => {
             <Timeline
               target={<p className=''>Watch me move! and then disappear!</p>}
             >
-              <Tween from={{ x: -1000 }} to={{ x: 500 }} />
-              <Tween from={{ opacity: 1 }} to={{ opacity: -1 }} />
+              <Tween from={{ x: -250 }} to={{ x: 500 }} />
+              <Tween from={{ opacity: 1 }} to={{ opacity: 0 }} />
             </Timeline>
           </Timeline>
         </div>

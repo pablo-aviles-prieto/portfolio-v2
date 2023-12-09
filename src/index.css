@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translateX(-50%) rotate(135deg);
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid rgb(251 191 36);
+  border-top: 1px solid rgb(251 191 36);
+  background-color: rgb(71 85 105);
+}
