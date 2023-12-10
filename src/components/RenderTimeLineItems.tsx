@@ -1,7 +1,6 @@
 import { TimelineCard } from './styles/TimelineCard';
 import {
   TIMELINE_BORDER,
-  TIMELINE_CONTAINER_CLASSES,
   TIMELINE_SLOT_MARGIN,
   TIMELINE_SLOT_WIDTH,
   timelineData,
@@ -38,9 +37,6 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
         style={containerStyle}
       >
         <div
-          className={`${TIMELINE_CONTAINER_CLASSES} ${
-            !isTopSide && '!flex-col-reverse'
-          }`}
           style={{
             marginTop: isTopSide ? '0px' : `${VERTICAL_MARGIN}px`,
             marginBottom: isTopSide ? `${VERTICAL_MARGIN}px` : '0px',

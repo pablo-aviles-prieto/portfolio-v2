@@ -29,7 +29,6 @@ export const timelineData = [
   },
 ];
 
-export const TIMELINE_CONTAINER_CLASSES = 'flex flex-col justify-end gap-y-2';
 export const TIMELINE_SLOT_WIDTH = 350;
 export const TIMELINE_SLOT_MARGIN = 50;
 export const TIMELINE_BORDER = 4;
