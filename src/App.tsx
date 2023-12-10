@@ -3,6 +3,7 @@ import { LandingComponent } from './components/LandingComponent';
 import { Timeline, Tween } from 'react-gsap';
 import { getEvenItemsFromArray } from './utils/getEvenItemsFromArray';
 import {
+  TIMELINE_BORDER,
   TIMELINE_SLOT_MARGIN,
   TIMELINE_SLOT_WIDTH,
   timelineData,
@@ -37,7 +38,8 @@ function App() {
                   <div style={{ width: `${timelineTotalWidth}px` }}>
                     <div
                       id='timeline-top-side'
-                      className='flex border-b-4 border-amber-700'
+                      className='flex border-amber-700'
+                      style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                     >
                       <RenderTimelineItems data={evenTimelineData} isTopSide />
                     </div>

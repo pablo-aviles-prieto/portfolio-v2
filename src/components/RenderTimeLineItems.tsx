@@ -1,5 +1,6 @@
 import { TimelineCard } from './styles/TimelineCard';
 import {
+  TIMELINE_BORDER,
   TIMELINE_CONTAINER_CLASSES,
   TIMELINE_SLOT_MARGIN,
   TIMELINE_SLOT_WIDTH,
@@ -14,7 +15,6 @@ type Props = {
 const CIRCLE_YEAR_WIDTH = 66;
 const CENTERED_YEAR = TIMELINE_SLOT_WIDTH / 2 - CIRCLE_YEAR_WIDTH / 2;
 const VERTICAL_MARGIN = 44;
-const TIMELINE_BORDER = 4;
 const CENTERED_CIRCLE_PX = CIRCLE_YEAR_WIDTH / 2 + TIMELINE_BORDER / 2;
 
 export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
