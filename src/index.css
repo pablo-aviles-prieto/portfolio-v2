@@ -5,7 +5,7 @@
 .timeline-card-top::before {
   content: '';
   position: absolute;
-  top: 78%;
+  top: 73%;
   left: 50%;
   transform: translateX(-50%) rotate(135deg);
   width: 10px;
@@ -18,7 +18,7 @@
 .timeline-card-bottom::before {
   content: '';
   position: absolute;
-  bottom: 75%;
+  bottom: 69%;
   left: 50%;
   transform: translateX(-50%) rotate(225deg);
   width: 10px;

@@ -37,7 +37,7 @@ function App() {
                   <div style={{ width: `${timelineTotalWidth}px` }}>
                     <div
                       id='timeline-top-side'
-                      className='flex border-b-2 border-amber-700'
+                      className='flex border-b-4 border-amber-700'
                     >
                       <RenderTimelineItems data={evenTimelineData} isTopSide />
                     </div>

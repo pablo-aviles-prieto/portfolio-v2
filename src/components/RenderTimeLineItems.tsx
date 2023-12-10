@@ -11,6 +11,12 @@ type Props = {
   isTopSide?: boolean;
 };
 
+const CIRCLE_YEAR_WIDTH = 66;
+const CENTERED_YEAR = TIMELINE_SLOT_WIDTH / 2 - CIRCLE_YEAR_WIDTH / 2;
+const VERTICAL_MARGIN = 44;
+const TIMELINE_BORDER = 4;
+const CENTERED_CIRCLE_PX = CIRCLE_YEAR_WIDTH / 2 + TIMELINE_BORDER / 2;
+
 export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
   const marginLeft = TIMELINE_SLOT_WIDTH + TIMELINE_SLOT_MARGIN * 2;
 
@@ -28,15 +34,35 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
     return (
       <div
         key={String(index) + String(item.year)}
-        className={`${TIMELINE_CONTAINER_CLASSES} ${
-          !isTopSide && '!flex-col-reverse'
-        } relative`}
+        className={`relative flex flex-col ${isTopSide && 'justify-end'}`}
         style={containerStyle}
       >
-        <TimelineCard timelinePosition={isTopSide ? 'top' : 'bottom'}>
-          {item.text}
-        </TimelineCard>
-        <p className='text-center'>{item.year}</p>
+        <div
+          className={`${TIMELINE_CONTAINER_CLASSES} ${
+            !isTopSide && '!flex-col-reverse'
+          }`}
+          style={{
+            marginTop: isTopSide ? '0px' : `${VERTICAL_MARGIN}px`,
+            marginBottom: isTopSide ? `${VERTICAL_MARGIN}px` : '0px',
+          }}
+        >
+          <TimelineCard timelinePosition={isTopSide ? 'top' : 'bottom'}>
+            {item.text}
+          </TimelineCard>
+          <div
+            className={`absolute text-center text-xl rounded-full border-[3px] 
+            border-amber-600 pt-[15px] bg-slate-700 text-amber-300 font-medium`}
+            style={{
+              width: `${CIRCLE_YEAR_WIDTH}px`,
+              height: `${CIRCLE_YEAR_WIDTH}px`,
+              left: `${CENTERED_YEAR}px`,
+              bottom: isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
+              top: !isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
+            }}
+          >
+            {item.year}
+          </div>
+        </div>
       </div>
     );
   });
