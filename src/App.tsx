@@ -19,7 +19,8 @@ function App() {
   const oddTimelineData = getOddItemsFromArray(timelineData);
 
   return (
-    <div className='overflow-hidden bg-slate-700 text-slate-50'>
+    // <div className='overflow-hidden bg-custom-purple-1 text-slate-50'>
+    <div className='overflow-hidden bg-shady-dark-blue-1 text-slate-50'>
       <div className='h-screen'>
         <LandingComponent />
       </div>
@@ -38,7 +39,9 @@ function App() {
                   <div style={{ width: `${timelineTotalWidth}px` }}>
                     <div
                       id='timeline-top-side'
-                      className='flex border-amber-700'
+                      className='flex border-vibrant-orange-1'
+                      // className='flex border-custom-orange-1'
+                      // className='flex border-amber-700'
                       style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                     >
                       <RenderTimelineItems data={evenTimelineData} isTopSide />
