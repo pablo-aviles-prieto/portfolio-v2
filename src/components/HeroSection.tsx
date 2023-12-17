@@ -1,7 +1,7 @@
 import { Header } from './Header';
 import { BlobWithImage } from './svgs/BlobWithImage';
 
-export const LandingComponent = () => {
+export const HeroSection = () => {
   return (
     <div className='relative h-screen'>
       <div className='relative z-10'>

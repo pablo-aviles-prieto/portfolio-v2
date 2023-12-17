@@ -1,5 +1,5 @@
 import { Controller, Scene } from 'react-scrollmagic';
-import { LandingComponent } from './components/LandingComponent';
+import { HeroSection } from './components/HeroSection';
 import { Timeline, Tween } from 'react-gsap';
 import { getEvenItemsFromArray } from './utils/getEvenItemsFromArray';
 import {
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className='bg-shady-dark-blue-1'>
       <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>
-        <LandingComponent />
+        <HeroSection />
         <Controller>
           <div>
             <div className='mx-auto overflow-hidden'>
