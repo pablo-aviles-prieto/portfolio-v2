@@ -3,8 +3,11 @@ import { BlobWithImage } from './svgs/BlobWithImage';
 
 export const LandingComponent = () => {
   return (
-    <div className='h-screen'>
-      <Header />
+    <div className='relative h-screen'>
+      <div className='relative z-10'>
+        <Header />
+      </div>
+      <div className='waves' />
       <div className='flex items-center justify-center h-[45rem] gap-x-8 text-xl text-[21px]'>
         <p className='w-[50%] text-right'>
           <span className='block'>

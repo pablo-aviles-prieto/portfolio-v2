@@ -27,3 +27,47 @@
   border-bottom: 1px solid rgb(251 191 36);
   background-color: rgb(71 85 105);
 }
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  transition: 500ms;
+  z-index: 1;
+}
+
+.waves::before,
+.waves::after {
+  content: '';
+  position: absolute;
+  width: 2900px;
+  height: 150vw;
+  top: -70vw;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+.waves::before {
+  border-radius: 44%;
+  background: '#A64942';
+  background: rgba(148, 65, 59, 0.3);
+  animation: waves 12s linear infinite;
+}
+
+.waves::after {
+  border-radius: 44%;
+  background: rgba(167, 73, 67, 0.7);
+  animation: waves 20s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}

@@ -19,7 +19,7 @@ function App() {
   const oddTimelineData = getOddItemsFromArray(timelineData);
 
   return (
-    <div className=' bg-shady-dark-blue-1'>
+    <div className='bg-shady-dark-blue-1'>
       <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>
         <LandingComponent />
         <Controller>

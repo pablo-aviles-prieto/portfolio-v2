@@ -11,8 +11,8 @@ export const BlobWithImage = (props: SVGProps<SVGSVGElement>) => (
         y2='0%'
         gradientTransform='rotate(141 .5 .5)'
       >
-        <stop offset='0%' stopColor='#8d3e38' />
-        <stop offset='100%' stopColor='#3f1a19' />
+        <stop offset='0%' stopColor='#A64942' />
+        <stop offset='100%' stopColor='#572523' />
       </linearGradient>
       <clipPath id='blobClip'>
         <path d='M81.5 60.5Q79 71 70 76.5t-20 6Q39 83 32.5 75T20 58.5Q14 50 20 41t12.5-16.5Q39 17 50.5 15T64 25.5Q66 38 75 44t6.5 16.5Z' />
