@@ -1,21 +1,40 @@
+import { Header } from './Header';
+import { BlobWithImage } from './svgs/BlobWithImage';
+
 export const LandingComponent = () => {
   return (
-    <div className='h-full'>
-      <div className='w-full border-b-2 border-b-muted-purple-1 h-[4rem] flex justify-between items-center px-[10rem]'>
-        <p>Hola que tal loco!!</p>
-        <div>Sección 1 | Sección 2 | Sección 3</div>
+    <div className='h-screen'>
+      <Header />
+      <div className='flex items-center justify-center h-[45rem] gap-x-8 text-xl text-[21px]'>
+        <p className='w-[50%] text-right'>
+          <span className='block'>
+            🤗 Hi there, I'm{' '}
+            <span className='font-bold text-muted-shady-red-1'>
+              Pablo Avilés
+            </span>
+            ,{' '}
+            <span className='italic font-bold text-bright-color-2'>
+              full-stack developer!
+            </span>
+            👋
+          </span>
+          <span className='block'>
+            I've been working in the{' '}
+            <span className='italic font-bold text-bright-color-2'>
+              IT world
+            </span>{' '}
+            for more than{' '}
+            <span className='italic font-bold text-bright-color-2'>
+              6 years.
+            </span>
+          </span>
+          Now completely focused on web development.
+        </p>
+        <div className='w-[50%] h-full text-left relative'>
+          <BlobWithImage className='absolute w-[110%] -left-[85px] bottom-[15px]' />
+        </div>
       </div>
-      <div className='flex items-center justify-center h-[45rem] gap-x-8 text-4xl'>
-        <p>Yo ma mang, this is some cool description, etc etc etc</p>
-        <div>This is an image block</div>
-        {/* <div className='w-[450px] relative'>
-        <img
-        src='/images/profile-pic-no-bground.webp'
-        alt='Pablo Avilés Prieto'
-        className='w-[350px] rounded-[50px] absolute bottom-[45px] left-[55px]'
-        />
-      </div> */}
-      </div>
+      <div className='text-center'>Learn more about me</div>
     </div>
   );
 };

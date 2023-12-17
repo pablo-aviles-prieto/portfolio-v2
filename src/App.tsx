@@ -19,57 +19,60 @@ function App() {
   const oddTimelineData = getOddItemsFromArray(timelineData);
 
   return (
-    // <div className='overflow-hidden bg-custom-purple-1 text-slate-50'>
-    <div className='overflow-hidden bg-shady-dark-blue-1 text-slate-50'>
-      <div className='h-screen'>
+    <div className=' bg-shady-dark-blue-1'>
+      <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>
         <LandingComponent />
-      </div>
-      <Controller>
-        <div>
-          <div className='w-[1000px] mx-auto overflow-hidden'>
-            <Scene
-              duration={5000}
-              triggerHook={0.2}
-              pin={{ pushFollowers: false }}
-              indicators={true}
-              classToggle='overflow-hidden'
-            >
-              <Timeline
-                target={
-                  <div style={{ width: `${timelineTotalWidth}px` }}>
-                    <div
-                      id='timeline-top-side'
-                      className='flex border-vibrant-orange-1'
-                      // className='flex border-custom-orange-1'
-                      // className='flex border-amber-700'
-                      style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
-                    >
-                      <RenderTimelineItems data={evenTimelineData} isTopSide />
-                    </div>
-                    <div id='timeline-bottom-side' className='flex'>
-                      <RenderTimelineItems
-                        data={oddTimelineData}
-                        isTopSide={false}
-                      />
-                    </div>
-                  </div>
-                }
+        <Controller>
+          <div>
+            <div className='mx-auto overflow-hidden'>
+              <Scene
+                duration={6000}
+                triggerHook={0.2}
+                pin={{ pushFollowers: false }}
+                indicators={true}
+                classToggle='overflow-hidden'
               >
-                <Tween from={{ x: 1000 }} to={{ x: -timelineTotalWidth }} />
-              </Timeline>
-            </Scene>
+                <Timeline
+                  target={
+                    <div style={{ width: `${timelineTotalWidth}px` }}>
+                      <div
+                        id='timeline-top-side'
+                        className='flex border-vibrant-orange-1'
+                        style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
+                      >
+                        <RenderTimelineItems
+                          data={evenTimelineData}
+                          isTopSide
+                        />
+                      </div>
+                      <div id='timeline-bottom-side' className='flex'>
+                        <RenderTimelineItems
+                          data={oddTimelineData}
+                          isTopSide={false}
+                        />
+                      </div>
+                    </div>
+                  }
+                >
+                  <Tween
+                    from={{ x: 1280 }}
+                    to={{ x: -(timelineTotalWidth + 10) }}
+                  />
+                </Timeline>
+              </Scene>
+            </div>
           </div>
-        </div>
-        <h1 className='mb-72'>
-          Last works and some other things after the timeline
-        </h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </Controller>
+          <h1 className='mb-72'>
+            Last works and some other things after the timeline
+          </h1>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+        </Controller>
+      </div>
     </div>
   );
 }
