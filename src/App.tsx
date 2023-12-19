@@ -27,7 +27,7 @@ function App() {
             <div className='mx-auto overflow-hidden'>
               <Scene
                 duration={6000}
-                triggerHook={0.2}
+                triggerHook={0.3}
                 pin={{ pushFollowers: false }}
                 indicators={true}
                 classToggle='overflow-hidden'
