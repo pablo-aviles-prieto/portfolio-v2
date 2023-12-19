@@ -42,9 +42,9 @@
 .waves::after {
   content: '';
   position: absolute;
-  width: 2900px;
-  height: 150vw;
-  top: -70vw;
+  width: 2800px;
+  height: 2800px;
+  top: -1300px;
   left: 50%;
   transform: translate(-50%, -25%);
 }
