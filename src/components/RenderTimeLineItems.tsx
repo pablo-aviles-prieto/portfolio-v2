@@ -46,14 +46,17 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
             {item.text}
           </TimelineCard>
           <div
-            className={`absolute text-center text-xl rounded-full border-[3px] 
-            border-amber-600 pt-[15px] bg-slate-700 text-amber-300 font-medium`}
+            className={`absolute flex items-center justify-center rounded-full 
+            border-[3px] border-amber-600 bg-slate-700 text-amber-300 font-medium
+            text-center ${item.year.length > 4 ? 'text-base' : 'text-xl'}`}
             style={{
               width: `${CIRCLE_YEAR_WIDTH}px`,
               height: `${CIRCLE_YEAR_WIDTH}px`,
               left: `${CENTERED_YEAR}px`,
               bottom: isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
               top: !isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
+              whiteSpace: 'pre-line',
+              lineHeight: item.year.length > 4 ? '14px' : '28px',
             }}
           >
             {item.year}

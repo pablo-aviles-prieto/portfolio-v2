@@ -1,4 +1,6 @@
 export const Header = () => {
+  // TODO: Add hover color to the sections links
+  // TODO: Add gradient to the Pablo Avilés?
   return (
     <div className='flex items-center justify-between pt-6'>
       <p className='text-3xl font-bold text-muted-shady-red-1'>Pablo Avilés</p>

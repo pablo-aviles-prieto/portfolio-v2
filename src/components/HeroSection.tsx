@@ -7,8 +7,10 @@ export const HeroSection = () => {
       <div className='relative z-10'>
         <Header />
       </div>
+      {/* TODO: Remove waves on mobile/tablet devices? */}
       <div className='waves' />
       <div className='flex items-center justify-center h-[80%] gap-x-8 text-xl text-[21px]'>
+        {/* TODO: Add Linkeding and github SVGs/links */}
         <p className='w-[50%] text-right'>
           <span className='block'>
             🤗 Hi there, I'm{' '}
