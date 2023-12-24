@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'shady-dark-blue-1': '#1B1F3A',
+        'shady-dark-blue-2': '#24294d',
         'muted-purple-1': '#53354A',
         'muted-shady-red-0': '#de6159',
         'muted-shady-red-1': '#A64942',

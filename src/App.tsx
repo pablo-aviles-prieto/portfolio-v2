@@ -37,7 +37,7 @@ function App() {
                     <div style={{ width: `${timelineTotalWidth}px` }}>
                       <div
                         id='timeline-top-side'
-                        className='flex border-vibrant-orange-1'
+                        className='flex border-muted-shady-red-0'
                         style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                       >
                         <RenderTimelineItems
