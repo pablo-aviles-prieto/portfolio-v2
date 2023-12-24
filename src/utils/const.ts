@@ -1,7 +1,8 @@
 export const timelineData = [
   {
-    year: '2000\n\r-\n\r2001',
-    text: 'Aquí dedicaba mi vida a ser un buen profesional de la petanca',
+    year: '2012\n\r-\n\r2014',
+    text: 'Studied Higher Technician in Computer Network Systems Management',
+    subtitle: 'IES Fernando Wirtz, A Coruña, Spain',
   },
   {
     year: '2002',

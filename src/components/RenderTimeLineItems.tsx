@@ -43,7 +43,12 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
           }}
         >
           <TimelineCard timelinePosition={isTopSide ? 'top' : 'bottom'}>
-            {item.text}
+            <p>{item.text}</p>
+            {item.subtitle && (
+              <p className='mt-3 text-sm italic font-medium text-muted-shady-red-0'>
+                {item.subtitle}
+              </p>
+            )}
           </TimelineCard>
           <div
             className={`pl-[2px] absolute flex items-center justify-center rounded-full border-[3px] 
@@ -56,7 +61,7 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
               bottom: isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
               top: !isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
               whiteSpace: 'pre-line',
-              lineHeight: item.year.length > 4 ? '14px' : '28px',
+              lineHeight: item.year.length > 4 ? '12px' : '28px',
               letterSpacing: '1px',
             }}
           >
