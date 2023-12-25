@@ -5,11 +5,11 @@
 .timeline-card-top::before {
   content: '';
   position: absolute;
-  top: 86%;
+  top: 85%;
   left: 50%;
   transform: translateX(-50%) rotate(135deg);
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-right: 2px solid #de6159;
   border-top: 2px solid #de6159;
   background-color: #24294d;

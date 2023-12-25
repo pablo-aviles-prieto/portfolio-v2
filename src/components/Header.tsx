@@ -16,7 +16,7 @@ export const Header = () => {
         <p>Timeline</p>
         <p>Previous works</p>
         <p>Contact me</p>
-        <div className='fixed flex items-center gap-2'>
+        <div className='flex items-center gap-2'>
           <FlagContainer
             onClick={() => setLanguage('es')}
             grayscale={language !== 'es'}

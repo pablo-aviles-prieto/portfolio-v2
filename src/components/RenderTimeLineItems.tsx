@@ -32,6 +32,18 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
           ? '0px'
           : `${marginLeft}px`,
     };
+    const yearTextSize =
+      item.year.length <= 4
+        ? 'text-xl'
+        : item.year.includes('Present')
+        ? 'text-[11px]'
+        : 'text-base';
+    const yearLineHeight =
+      item.year.length <= 4
+        ? '28px'
+        : item.year.includes('Present')
+        ? '10px'
+        : '12px';
 
     return (
       <div
@@ -56,7 +68,7 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
           <div
             className={`pl-[2px] absolute flex items-center justify-center rounded-full border-[3px] 
            border-muted-shady-red-0 bg-shady-dark-blue-1 text-bright-color-2 font-bold
-            text-center ${item.year.length > 4 ? 'text-base' : 'text-xl'}`}
+            text-center ${yearTextSize}`}
             style={{
               width: `${CIRCLE_YEAR_WIDTH}px`,
               height: `${CIRCLE_YEAR_WIDTH}px`,
@@ -64,7 +76,7 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
               bottom: isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
               top: !isTopSide ? `-${CENTERED_CIRCLE_PX}px` : '',
               whiteSpace: 'pre-line',
-              lineHeight: item.year.length > 4 ? '12px' : '28px',
+              lineHeight: yearLineHeight,
               letterSpacing: '1px',
             }}
           >

@@ -27,7 +27,7 @@ function App() {
             <div className='mx-auto overflow-hidden'>
               <Scene
                 duration={6000}
-                triggerHook={0.1}
+                triggerHook={0.12}
                 pin={{ pushFollowers: false }}
                 indicators={true}
                 classToggle='overflow-hidden'
@@ -37,7 +37,7 @@ function App() {
                     <div style={{ width: `${timelineTotalWidth}px` }}>
                       <div
                         id='timeline-top-side'
-                        className='flex border-muted-shady-red-0 min-h-[350px] max-h-[350px]'
+                        className='flex border-muted-shady-red-0 min-h-[332px] max-h-[332px]'
                         style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                       >
                         <RenderTimelineItems
@@ -65,9 +65,6 @@ function App() {
               </Scene>
             </div>
           </div>
-          <h1 className='mb-72'>
-            Last works and some other things after the timeline
-          </h1>
           <br />
           <br />
           <br />
@@ -75,6 +72,9 @@ function App() {
           <br />
           <br />
         </Controller>
+        <h1 className='mb-72'>
+          v2 Last works and some other things after the timeline
+        </h1>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 // subtitle is optional
+// TODO: Add another property to add some icons of web developing, systems, networking, csgo...
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',
@@ -30,28 +31,72 @@ export const timelineData = [
       es: 'Convergys, A Coruña, España',
     },
   },
-  // {
-  //   year: '2003',
-  //   text: 'Pues era ingeniero agrícola en mis ratos libres, además de ser un buen señor fumador de anacardos',
-  //   subtitle: 'Yoqsetio xdxd',
-  // },
-  // {
-  //   year: '2005',
-  //   text: 'Me dedicaba profesionalmente a ser un profesional de la profesionalización',
-  //   subtitle: 'Yoqsetio xdxd v2',
-  // },
-  // {
-  //   year: '2008',
-  //   text: 'Pues un buen lorem ipsum no facto in facto no se estoy escribiendo texto random para poder rellenar esta carta y que tenga algo de contenido bastante largo, para simular una bien bacana, u know papa?',
-  // },
-  // {
-  //   year: '2010',
-  //   text: 'En 2010 pues estaba haciendo business things u know, hustling da money y esas cosillas ... na en verdad no se ni que estaba haciendo jaja salu2',
-  // },
-  // {
-  //   year: '2013',
-  //   text: 'En 2013 fasfa fa fas fas fasfasfasfasffasfasfasfasffasfasfasfasffasfasfasfasffasfasfasfasffasfasfasfasf',
-  // },
+  {
+    year: '2016\n\r-\n\r2019',
+    text: {
+      en: 'Professional esports player in the game Counter-Strike: Global Offensive (CS:GO), for Baskonia Atlantis, Team Heretics, and Arctic Gaming',
+      es: 'Jugador profesional de esports en el juego Counter-Strike: Global offensive (CS:GO), para Baskonia Atlantis, Team Heretics y Arctic Gaming',
+    },
+    subtitle: {
+      en: 'Remote, Spain',
+      es: 'Remoto, España',
+    },
+  },
+  {
+    year: '2019\n\r-\n\r2022',
+    text: {
+      en: 'Remote technical support orientated to networking and systems to companies in two Internet Service Providers (Mundo-r and Telecable)',
+      es: 'Soporte técnico de sistemas y telecomunicaciones en remoto para grandes cuentas de los clientes Mundo-R y Telecable (proveedores de servicios de internet)',
+    },
+    subtitle: {
+      en: 'Indra, A Coruña, Spain',
+      es: 'Indra, A Coruña, España',
+    },
+  },
+  {
+    year: '2022',
+    text: {
+      en: 'I have studied and obtained certifications in frontend and backend development, with a focus on React and JavaScript, through courses on Udemy and freeCodeCamp',
+      es: 'He estudiado y obtenido certificaciones en desarrollo frontend y backend, enfocándome en React y JavaScript, a través de cursos en Udemy y freeCodeCamp',
+    },
+    subtitle: {
+      en: 'Udemy and freeCodeCamp, remote, Spain',
+      es: 'Udemy y freeCodeCamp, remoto, España',
+    },
+  },
+  {
+    year: '2022\n\r-\n\r2023',
+    text: {
+      en: 'Developing in both the backend and frontend, working with:\n\rFrontend: ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest and Cypress\n\rBackend: NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest and SuperTest',
+      es: 'Desarrollando tanto en el backend como en el frontend, trabajando con:\n\rFrontend: ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n\rBackend: NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
+    },
+    subtitle: {
+      en: 'OXYGEN, remote, Spain',
+      es: 'OXYGEN, remoto, España',
+    },
+  },
+  {
+    year: '2023',
+    text: {
+      en: 'Frontend Developer specialized in React, TypeScript and Tailwind CSS. Creating dynamic web applications with a strong emphasis on design and user experience. Working with libraries like SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms. Conducting unit and e2e testing using Cypress, Jest, and MirageJS. Working under Agile Scrum methodologies with sprints and Kanban',
+      es: 'Desarrollador Frontend especializado en React, TypeScript y Tailwind CSS. Creando aplicaciones web dinámicas enfocadas en el diseño y la experiencia de usuario. Trabajando con librerías como SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms. Testing unitario y e2e utilizando Cypress, Jest y MirageJS. Trabajando bajo metodologías agile scrum con sprints y kanban',
+    },
+    subtitle: {
+      en: 'Flat 101, remote (Zaragoza), Spain',
+      es: 'Flat 101, remoto (Zaragoza), España',
+    },
+  },
+  {
+    year: '2023\n\r-\n\rPresent',
+    text: {
+      en: 'Currently working, primarily using React and Node.js',
+      es: 'Trabajando actualmente, usando principalmente React y Nodejs',
+    },
+    subtitle: {
+      en: 'Ovixia, hybrid (A Coruña), Spain',
+      es: 'Ovixia, híbrido (A Coruña), España',
+    },
+  },
 ];
 
 export const TIMELINE_SLOT_WIDTH = 350;
