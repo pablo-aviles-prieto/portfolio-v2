@@ -5,6 +5,8 @@ import {
   TIMELINE_SLOT_WIDTH,
   timelineData,
 } from '../utils/const';
+import { useContext } from 'react';
+import { LanguageContext } from '../store/LanguageContext';
 
 type Props = {
   data: typeof timelineData;
@@ -17,7 +19,10 @@ const VERTICAL_MARGIN = 44;
 const CENTERED_CIRCLE_PX = CIRCLE_YEAR_WIDTH / 2 + TIMELINE_BORDER / 2;
 
 export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
+  const { language } = useContext(LanguageContext);
   const marginLeft = TIMELINE_SLOT_WIDTH + TIMELINE_SLOT_MARGIN * 2;
+
+  console.log('language', language);
 
   return data.map((item, index) => {
     const containerStyle = {
