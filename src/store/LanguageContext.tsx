@@ -6,12 +6,12 @@ type Props = {
 };
 
 type LanguageContextType = {
-  language: string;
-  setLanguage: Dispatch<SetStateAction<string>>;
+  language: 'es' | 'en';
+  setLanguage: Dispatch<SetStateAction<'es' | 'en'>>;
 };
 
 const defaultLanguageContext: LanguageContextType = {
-  language: 'en',
+  language: 'es',
   setLanguage: () => {},
 };
 
@@ -21,7 +21,7 @@ export const LanguageContext = createContext<LanguageContextType>(
 
 export const LanguageProvider = ({ children }: Props) => {
   const defaultLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
-  const [language, setLanguage] = useState(defaultLanguage);
+  const [language, setLanguage] = useState<'es' | 'en'>(defaultLanguage);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

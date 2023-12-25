@@ -5,11 +5,11 @@
 .timeline-card-top::before {
   content: '';
   position: absolute;
-  top: 73%;
+  top: 86%;
   left: 50%;
   transform: translateX(-50%) rotate(135deg);
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-right: 2px solid #de6159;
   border-top: 2px solid #de6159;
   background-color: #24294d;
@@ -18,11 +18,11 @@
 .timeline-card-bottom::before {
   content: '';
   position: absolute;
-  bottom: 69%;
+  bottom: 86%;
   left: 50%;
   transform: translateX(-50%) rotate(225deg);
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   border-right: 2px solid #de6159;
   border-bottom: 2px solid #de6159;
   background-color: #24294d;

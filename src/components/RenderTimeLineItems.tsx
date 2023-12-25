@@ -22,8 +22,6 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
   const { language } = useContext(LanguageContext);
   const marginLeft = TIMELINE_SLOT_WIDTH + TIMELINE_SLOT_MARGIN * 2;
 
-  console.log('language', language);
-
   return data.map((item, index) => {
     const containerStyle = {
       maxWidth: `${TIMELINE_SLOT_WIDTH}px`,
@@ -48,10 +46,10 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
           }}
         >
           <TimelineCard timelinePosition={isTopSide ? 'top' : 'bottom'}>
-            <p>{item.text}</p>
+            <p>{item.text[language]}</p>
             {item.subtitle && (
               <p className='mt-3 text-sm italic font-medium text-muted-shady-red-0'>
-                {item.subtitle}
+                {item.subtitle[language]}
               </p>
             )}
           </TimelineCard>
