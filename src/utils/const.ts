@@ -1,3 +1,4 @@
+// subtitle is optional
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',
@@ -5,8 +6,9 @@ export const timelineData = [
     subtitle: 'IES Fernando Wirtz, A Coruña, Spain',
   },
   {
-    year: '2002',
-    text: 'Aqui dedicaba mi tiempo a ludar como un buen cabron a juegos de pistolitas que hacian pium pium pium y esas movidicas :)',
+    year: '2014',
+    text: 'Internship of the computer network systems management studies',
+    subtitle: 'CHUAC, A Coruña, Spain',
   },
   {
     year: '2003',
