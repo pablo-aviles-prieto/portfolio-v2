@@ -1,5 +1,5 @@
 // subtitle is optional
-// TODO: Add another property to add some icons of web developing, systems, networking, csgo...
+// TODO: Add another property to know if its from IT/Network, gamer or dev each card
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',

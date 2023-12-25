@@ -10,6 +10,7 @@ import {
 } from './utils/const';
 import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
 import { RenderTimelineItems } from './components/RenderTimeLineItems';
+import { TimelineLegend } from './components/TimelineLegend';
 
 function App() {
   const timelineTotalWidth =
@@ -27,7 +28,7 @@ function App() {
             <div className='mx-auto overflow-hidden'>
               <Scene
                 duration={6000}
-                triggerHook={0.12}
+                triggerHook={0.05}
                 pin={{ pushFollowers: false }}
                 indicators={true}
                 classToggle='overflow-hidden'
@@ -57,24 +58,35 @@ function App() {
                     </div>
                   }
                 >
-                  <Tween
-                    from={{ x: 1280 }}
-                    to={{ x: -(timelineTotalWidth + 10) }}
-                  />
+                  <Tween from={{ x: 1280 }} to={{ x: -timelineTotalWidth }} />
+                  {/* Timeline for the legend */}
+                  <Timeline
+                    target={
+                      <div className='mt-8'>
+                        <TimelineLegend />
+                      </div>
+                    }
+                  >
+                    <Tween
+                      from={{ opacity: 1 }}
+                      to={{ opacity: 0 }}
+                      duration={0.1}
+                    />
+                  </Timeline>
                 </Timeline>
               </Scene>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </Controller>
         <h1 className='mb-72'>
           v2 Last works and some other things after the timeline
         </h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );
