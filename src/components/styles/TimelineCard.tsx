@@ -1,15 +1,36 @@
 import type { ReactNode } from 'react';
+import { timelineBground } from '../../utils/const';
 
 type Props = {
   children: ReactNode;
   timelinePosition?: 'top' | 'bottom';
+  type: keyof typeof timelineBground;
 };
 
-export const TimelineCard = ({ children, timelinePosition = 'top' }: Props) => {
+export const TimelineCard = ({
+  children,
+  timelinePosition = 'top',
+  type,
+}: Props) => {
+  const colorMap = {
+    it: '--color-it',
+    gaming: '--color-gaming',
+    dev: '--color-dev',
+  };
+
+  const colorVariable = colorMap[type];
+  const styleTyped = {
+    whiteSpace: 'pre-line',
+    '--arrow-bg-color': `var(${colorVariable})`, // Use the CSS variable
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any;
+
   return (
     <div
-      style={{ whiteSpace: 'pre-line' }}
-      className={`px-4 py-2 text-left border-2 rounded-md bg-shady-dark-blue-2 border-muted-shady-red-0 ${
+      style={styleTyped}
+      className={`px-4 py-2 text-left border-2 rounded-md ${
+        timelineBground[type]
+      } border-muted-shady-red-0 ${
         timelinePosition === 'top'
           ? 'timeline-card-top'
           : 'timeline-card-bottom'

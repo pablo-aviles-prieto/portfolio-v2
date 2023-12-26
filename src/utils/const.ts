@@ -1,5 +1,3 @@
-// subtitle is optional
-// TODO: Add another property to know if its from IT/Network, gamer or dev each card
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',
@@ -11,6 +9,7 @@ export const timelineData = [
       en: 'IES Fernando Wirtz, A Coruña, Spain',
       es: 'IES Fernando Wirtz, A Coruña, España',
     },
+    type: 'it',
   },
   {
     year: '2014',
@@ -19,6 +18,7 @@ export const timelineData = [
       es: 'Prácticas de los estudios de administración de sistemas en red',
     },
     subtitle: { en: 'CHUAC, A Coruña, Spain', es: 'CHUAC, A Coruña, España' },
+    type: 'it',
   },
   {
     year: '2015\n\r-\n\r2016',
@@ -30,6 +30,7 @@ export const timelineData = [
       en: 'Convergys, A Coruña, Spain',
       es: 'Convergys, A Coruña, España',
     },
+    type: 'it',
   },
   {
     year: '2016\n\r-\n\r2019',
@@ -41,6 +42,7 @@ export const timelineData = [
       en: 'Remote, Spain',
       es: 'Remoto, España',
     },
+    type: 'gaming',
   },
   {
     year: '2019\n\r-\n\r2022',
@@ -52,6 +54,7 @@ export const timelineData = [
       en: 'Indra, A Coruña, Spain',
       es: 'Indra, A Coruña, España',
     },
+    type: 'it',
   },
   {
     year: '2022',
@@ -60,9 +63,10 @@ export const timelineData = [
       es: 'He estudiado y obtenido certificaciones en desarrollo frontend y backend, enfocándome en React y JavaScript, a través de cursos en Udemy y freeCodeCamp',
     },
     subtitle: {
-      en: 'Udemy and freeCodeCamp, remote, Spain',
-      es: 'Udemy y freeCodeCamp, remoto, España',
+      en: 'Udemy and freeCodeCamp',
+      es: 'Udemy y freeCodeCamp',
     },
+    type: 'dev',
   },
   {
     year: '2022\n\r-\n\r2023',
@@ -71,9 +75,10 @@ export const timelineData = [
       es: 'Desarrollando tanto en el backend como en el frontend, trabajando con:\n\rFrontend: ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n\rBackend: NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
     },
     subtitle: {
-      en: 'OXYGEN, remote, Spain',
-      es: 'OXYGEN, remoto, España',
+      en: 'OXYGEN, remote (Madrid), Spain',
+      es: 'OXYGEN, remoto (Madrid), España',
     },
+    type: 'dev',
   },
   {
     year: '2023',
@@ -85,6 +90,7 @@ export const timelineData = [
       en: 'Flat 101, remote (Zaragoza), Spain',
       es: 'Flat 101, remoto (Zaragoza), España',
     },
+    type: 'dev',
   },
   {
     year: '2023\n\r-\n\rPresent',
@@ -96,8 +102,15 @@ export const timelineData = [
       en: 'Ovixia, hybrid (A Coruña), Spain',
       es: 'Ovixia, híbrido (A Coruña), España',
     },
+    type: 'dev',
   },
 ];
+
+export const timelineBground = {
+  it: 'bg-blue-950',
+  gaming: 'bg-sky-950',
+  dev: 'bg-indigo-950',
+};
 
 export const TIMELINE_SLOT_WIDTH = 350;
 export const TIMELINE_SLOT_MARGIN = 50;

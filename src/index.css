@@ -2,30 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-.timeline-card-top::before {
-  content: '';
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translateX(-50%) rotate(135deg);
-  width: 9px;
-  height: 9px;
-  border-right: 2px solid #de6159;
-  border-top: 2px solid #de6159;
-  background-color: #24294d;
+:root {
+  --color-it: #172554;
+  --color-gaming: #082f49;
+  --color-dev: #1e1b4b;
+  --color-muted-shady-red: #de6159;
 }
 
+.timeline-card-top::before,
 .timeline-card-bottom::before {
   content: '';
   position: absolute;
-  bottom: 86%;
   left: 50%;
-  transform: translateX(-50%) rotate(225deg);
   width: 9px;
   height: 9px;
-  border-right: 2px solid #de6159;
-  border-bottom: 2px solid #de6159;
-  background-color: #24294d;
+  /* Defined in TimelineCard component */
+  background-color: var(--arrow-bg-color);
+}
+
+.timeline-card-top::before {
+  top: 85%;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%) rotate(135deg);
+  border-right: 2px solid var(--color-muted-shady-red);
+  border-top: 2px solid var(--color-muted-shady-red);
+}
+
+.timeline-card-bottom::before {
+  bottom: 86%;
+  transform: translateX(-50%) rotate(225deg);
+  border-right: 2px solid var(--color-muted-shady-red);
+  border-bottom: 2px solid var(--color-muted-shady-red);
 }
 
 .waves {

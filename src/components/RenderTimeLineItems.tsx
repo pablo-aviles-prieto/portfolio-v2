@@ -3,6 +3,7 @@ import {
   TIMELINE_BORDER,
   TIMELINE_SLOT_MARGIN,
   TIMELINE_SLOT_WIDTH,
+  timelineBground,
   timelineData,
 } from '../utils/const';
 import { useContext } from 'react';
@@ -57,7 +58,10 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
             marginBottom: isTopSide ? `${VERTICAL_MARGIN}px` : '0px',
           }}
         >
-          <TimelineCard timelinePosition={isTopSide ? 'top' : 'bottom'}>
+          <TimelineCard
+            timelinePosition={isTopSide ? 'top' : 'bottom'}
+            type={item.type as keyof typeof timelineBground}
+          >
             <p>{item.text[language]}</p>
             {item.subtitle && (
               <p className='mt-3 text-sm italic font-medium text-muted-shady-red-0'>
@@ -67,8 +71,8 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
           </TimelineCard>
           <div
             className={`pl-[2px] absolute flex items-center justify-center rounded-full border-[3px] 
-           border-muted-shady-red-0 bg-shady-dark-blue-1 text-bright-color-2 font-bold
-            text-center ${yearTextSize}`}
+           border-muted-shady-red-0 text-bright-color-2 font-bold text-center ${yearTextSize} 
+           ${timelineBground[item.type as keyof typeof timelineBground]}`}
             style={{
               width: `${CIRCLE_YEAR_WIDTH}px`,
               height: `${CIRCLE_YEAR_WIDTH}px`,
