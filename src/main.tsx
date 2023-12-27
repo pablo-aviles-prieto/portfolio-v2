@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App.tsx';
 import { LanguageProvider } from './store/LanguageContext.tsx';
 import './index.css';
+import './cards.css';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

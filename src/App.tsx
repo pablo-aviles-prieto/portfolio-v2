@@ -11,6 +11,7 @@ import {
 import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
 import { RenderTimelineItems } from './components/RenderTimeLineItems';
 import { TimelineLegend } from './components/TimelineLegend';
+import { Card } from './components/Card';
 
 function App() {
   const timelineTotalWidth =
@@ -80,6 +81,7 @@ function App() {
         </Controller>
         <h1 className='mb-72'>
           v2 Last works and some other things after the timeline
+          <Card />
         </h1>
         <br />
         <br />
