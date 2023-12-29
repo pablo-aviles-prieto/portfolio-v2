@@ -63,7 +63,7 @@ export const Card = () => {
   return (
     <div ref={containerRef} className='container'>
       <article>
-        <div className='glows'></div>
+        <div className='glows' />
         <span className='header'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -136,7 +136,7 @@ export const Card = () => {
         </h2>
       </article>
       <article className='!w-[400px]'>
-        <div className='glows'></div>
+        <div className='glows' />
         <p>Test v1</p>
         <p>Test v1</p>
         <p>Test v1</p>
