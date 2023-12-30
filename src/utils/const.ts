@@ -115,3 +115,60 @@ export const timelineBground = {
 export const TIMELINE_SLOT_WIDTH = 350;
 export const TIMELINE_SLOT_MARGIN = 50;
 export const TIMELINE_BORDER = 4;
+
+export const prevWorks = [
+  {
+    title: 'Pinta2',
+    descriptionEn:
+      'Play with your friends in this skribbl (draw and guess) game alike',
+    subDescriptionEn: 'Only available in spanish at the moment',
+    descriptionEs:
+      'Juega con tus amigos en este juego (de dibujar y adivinar) parecido al pinturillo',
+    techs: ['react', 'typescript', 'tailwind', 'socketio', 'nodejs'],
+    github: 'https://github.com/Pablo-Aviles-Prieto/pinta2-frontend',
+    github2: 'https://github.com/Pablo-Aviles-Prieto/pinta2-backend',
+    website: 'https://www.pinta2.pabloaviles.es/',
+  },
+  {
+    title: 'Scrape it!',
+    descriptionEn:
+      'Web scrapper for the coolmod site, where you can subscribe via email to get the latest item pricing',
+    subDescriptionEn:
+      'Currently not deployed, even when the code is working 100%',
+    descriptionEs:
+      'Web scrapper para la página de coolmod, donde puedes subscribirte por email para recibir los últimos precios de un producto',
+    subDescriptionEs:
+      'Actualmente sin desplegar, aunque el código es 100% funcional',
+    techs: ['remix', 'typescript', 'tailwind', 'playwright', 'mongodb'],
+    github: 'https://github.com/Pablo-Aviles-Prieto/remix-scrape-it',
+  },
+  {
+    title: 'Hotel Miranda dashboard',
+    descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
+    descriptionEs:
+      'Dashboard de control para gestionar todos los datos del Hotel Miranda',
+    techs: ['react', 'typescript', 'redux', 'cypress', 'nodejs', 'mongodb'],
+    github:
+      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-frontend',
+    github2:
+      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-backend',
+    website: 'https://www.miranda-dashboard.pabloaviles.es/',
+  },
+  {
+    title: 'Hotel Miranda website',
+    descriptionEn: `Public website of the 'Hotel Miranda'`,
+    descriptionEs: 'Página web pública del Hotel Miranda',
+    techs: ['php', 'mysql', 'javascript'],
+    github: 'https://github.com/Pablo-Aviles-Prieto/Hotel-management-PHP',
+    website: 'https://hotelmiranda.000webhostapp.com/',
+  },
+  {
+    title: 'Image finder',
+    descriptionEn: 'App image finder using the unsplash API',
+    descriptionEs: 'Aplicación para buscar imágenes de unsplash',
+    techs: ['react', 'typescript', 'redux'],
+    github:
+      'https://github.com/Pablo-Aviles-Prieto/app-image-finder-unsplash-React-TS',
+    website: 'https://www.images.pabloaviles.es/',
+  },
+];
