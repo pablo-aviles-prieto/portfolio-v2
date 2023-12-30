@@ -66,8 +66,12 @@ export const Card = () => {
       {prevWorks.map((work) => (
         <article key={work.title} className='!w-[400px]'>
           <div className='glows' />
+          <p>{work.image || 'Image'}</p>
           <p>{work.title}</p>
           <p>{work.descriptionEn}</p>
+          <p>{work.subDescriptionEn}</p>
+          <p>{work.techs.join(' ')}</p>
+          <p>Githubs y website</p>
         </article>
       ))}
     </div>

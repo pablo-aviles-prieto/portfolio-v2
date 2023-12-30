@@ -79,16 +79,12 @@ function App() {
             </div>
           </div>
         </Controller>
-        <h1 className='mb-72'>
-          v2 Last works and some other things after the timeline
-          <Card />
-        </h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div className='text-4xl font-bold text-center'>
+          <h1 className='inline-block text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
+            Previous works
+          </h1>
+        </div>
+        <Card />
       </div>
     </div>
   );
