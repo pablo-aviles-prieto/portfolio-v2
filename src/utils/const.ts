@@ -1,4 +1,19 @@
 import type { PrevWork } from '../interfaces/prevWorks';
+import {
+  Cypress,
+  JavaScript,
+  MongoDB,
+  MySQL,
+  NodeJS,
+  PHP,
+  Playwright,
+  React,
+  Redux,
+  TypeScript,
+  Tailwind,
+  Socketio,
+  Remix,
+} from '../components/svgs/technologies';
 
 export const timelineData = [
   {
@@ -121,7 +136,7 @@ export const TIMELINE_BORDER = 4;
 export const prevWorks: PrevWork[] = [
   {
     title: 'Pinta2',
-    image: '',
+    image: 'pinta2.webp',
     descriptionEn:
       'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
@@ -134,11 +149,11 @@ export const prevWorks: PrevWork[] = [
   },
   {
     title: 'Scrape it!',
-    image: '',
+    image: 'scrape-it.webp',
     descriptionEn:
       'Web scrapper for the coolmod site, where you can subscribe via email to get the latest item pricing',
     subDescriptionEn:
-      'Currently not deployed, even when the code is working 100%',
+      'Currently not deployed, even while the code is working 100%',
     descriptionEs:
       'Web scrapper para la página de coolmod, donde puedes subscribirte por email para recibir los últimos precios de un producto',
     subDescriptionEs:
@@ -148,7 +163,7 @@ export const prevWorks: PrevWork[] = [
   },
   {
     title: 'Hotel Miranda dashboard',
-    image: '',
+    image: 'dashboard-miranda.webp',
     descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
     descriptionEs:
       'Dashboard de control para gestionar todos los datos del Hotel Miranda',
@@ -161,7 +176,7 @@ export const prevWorks: PrevWork[] = [
   },
   {
     title: 'Hotel Miranda website',
-    image: '',
+    image: 'miranda-public.webp',
     descriptionEn: `Public website of the 'Hotel Miranda'`,
     descriptionEs: 'Página web pública del Hotel Miranda',
     techs: ['php', 'mysql', 'javascript'],
@@ -170,7 +185,7 @@ export const prevWorks: PrevWork[] = [
   },
   {
     title: 'Image finder',
-    image: '',
+    image: 'img-finder.webp',
     descriptionEn: 'App image finder using the unsplash API',
     descriptionEs: 'Aplicación para buscar imágenes de unsplash',
     techs: ['react', 'typescript', 'redux'],
@@ -179,3 +194,19 @@ export const prevWorks: PrevWork[] = [
     website: 'https://www.images.pabloaviles.es/',
   },
 ];
+
+export const techs = {
+  cypress: Cypress,
+  javascript: JavaScript,
+  mongodb: MongoDB,
+  mysql: MySQL,
+  nodejs: NodeJS,
+  php: PHP,
+  playwright: Playwright,
+  react: React,
+  redux: Redux,
+  typescript: TypeScript,
+  tailwind: Tailwind,
+  socketio: Socketio,
+  remix: Remix,
+} as const;

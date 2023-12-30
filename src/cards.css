@@ -42,14 +42,10 @@ article {
   --start: 0;
   height: 100%;
   background: var(--card);
-  padding: 2rem;
   aspect-ratio: 330 / 400;
   border-radius: var(--border-radius);
-  min-width: 350px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  min-width: 400px;
+  max-width: 400px;
   position: relative;
 }
 

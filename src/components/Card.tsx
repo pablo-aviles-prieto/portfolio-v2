@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef } from 'react';
-import { prevWorks } from '../utils/const';
+import { prevWorks, techs } from '../utils/const';
 
 export const Card = () => {
   const containerRef = useRef<any>(null);
@@ -8,7 +8,7 @@ export const Card = () => {
     proximity: 40,
     spread: 80,
     blur: 20,
-    gap: 32,
+    gap: 16,
     vertical: false,
     opacity: 0,
   };
@@ -64,14 +64,42 @@ export const Card = () => {
   return (
     <div ref={containerRef} className='container'>
       {prevWorks.map((work) => (
-        <article key={work.title} className='!w-[400px]'>
+        <article key={work.title} className='overflow-hidden'>
           <div className='glows' />
-          <p>{work.image || 'Image'}</p>
-          <p>{work.title}</p>
-          <p>{work.descriptionEn}</p>
-          <p>{work.subDescriptionEn}</p>
-          <p>{work.techs.join(' ')}</p>
-          <p>Githubs y website</p>
+          {work.image && (
+            <div
+              className='w-[400px] h-[225px] flex border-t border-x 
+              border-transparent justify-center items-center overflow-hidden'
+            >
+              <img
+                src={`/images/prev-works/${work.image}`}
+                alt={work.title}
+                className='w-[100%] h-[100%] object-cover'
+              />
+            </div>
+          )}
+          <div className='flex flex-col justify-between h-[calc(100%-225px)] p-4 text-base'>
+            <div>
+              <p className='pb-4 text-xl font-bold tracking-wider text-center text-vibrant-orange-1'>
+                {work.title}
+              </p>
+              <div className='flex items-center justify-center mb-4 gap-x-4'>
+                {work.techs.map((tech) => {
+                  const TechIcon = techs[tech as keyof typeof techs];
+                  return <TechIcon key={tech} className='w-7 h-7' />;
+                })}
+              </div>
+              <p>
+                {work.descriptionEn}{' '}
+                {work.subDescriptionEn && (
+                  <span className='text-xs italic'>
+                    *{work.subDescriptionEn}
+                  </span>
+                )}
+              </p>
+            </div>
+            <p>Githubs y website</p>
+          </div>
         </article>
       ))}
     </div>
