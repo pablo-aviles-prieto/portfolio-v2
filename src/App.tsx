@@ -71,7 +71,7 @@ function App() {
                     <Tween
                       from={{ opacity: 1 }}
                       to={{ opacity: 0 }}
-                      duration={0.1}
+                      duration={0.01}
                     />
                   </Timeline>
                 </Timeline>
@@ -79,7 +79,7 @@ function App() {
             </div>
           </div>
         </Controller>
-        <div className='text-4xl font-bold text-center'>
+        <div className='-mt-16 text-4xl font-bold text-center'>
           <h1 className='inline-block text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
             Previous works
           </h1>
