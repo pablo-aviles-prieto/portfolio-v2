@@ -2,7 +2,6 @@
   --bg: hsl(246 44% 7%);
   --border: hsl(280 10% 50% / 1);
   --card: hsl(237 36% 10%);
-  --color: hsl(240 18% 80%);
   --border-width: 2px;
   --border-radius: 12px;
   --gradient: conic-gradient(
@@ -26,10 +25,6 @@
   syntax: '<number>';
   inherits: true;
   initial-value: 0;
-}
-
-body {
-  color: var(--color);
 }
 
 .container {
