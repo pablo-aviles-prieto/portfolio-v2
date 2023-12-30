@@ -1,3 +1,5 @@
+import type { PrevWork } from '../interfaces/prevWorks';
+
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',
@@ -116,9 +118,10 @@ export const TIMELINE_SLOT_WIDTH = 350;
 export const TIMELINE_SLOT_MARGIN = 50;
 export const TIMELINE_BORDER = 4;
 
-export const prevWorks = [
+export const prevWorks: PrevWork[] = [
   {
     title: 'Pinta2',
+    image: '',
     descriptionEn:
       'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
@@ -131,6 +134,7 @@ export const prevWorks = [
   },
   {
     title: 'Scrape it!',
+    image: '',
     descriptionEn:
       'Web scrapper for the coolmod site, where you can subscribe via email to get the latest item pricing',
     subDescriptionEn:
@@ -144,6 +148,7 @@ export const prevWorks = [
   },
   {
     title: 'Hotel Miranda dashboard',
+    image: '',
     descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
     descriptionEs:
       'Dashboard de control para gestionar todos los datos del Hotel Miranda',
@@ -156,6 +161,7 @@ export const prevWorks = [
   },
   {
     title: 'Hotel Miranda website',
+    image: '',
     descriptionEn: `Public website of the 'Hotel Miranda'`,
     descriptionEs: 'Página web pública del Hotel Miranda',
     techs: ['php', 'mysql', 'javascript'],
@@ -164,6 +170,7 @@ export const prevWorks = [
   },
   {
     title: 'Image finder',
+    image: '',
     descriptionEn: 'App image finder using the unsplash API',
     descriptionEs: 'Aplicación para buscar imágenes de unsplash',
     techs: ['react', 'typescript', 'redux'],
