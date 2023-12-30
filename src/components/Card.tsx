@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef } from 'react';
 import { prevWorks, techs } from '../utils/const';
+import { Github } from './svgs/Github';
+import { Web } from './svgs/Web';
 
 export const Card = () => {
   const containerRef = useRef<any>(null);
@@ -80,7 +82,7 @@ export const Card = () => {
           )}
           <div className='flex flex-col justify-between h-[calc(100%-225px)] p-4 text-base'>
             <div>
-              <p className='pb-4 text-xl font-bold tracking-wider text-center text-vibrant-orange-1'>
+              <p className='mb-6 text-xl text-[22px] font-bold tracking-wider text-center text-vibrant-orange-1'>
                 {work.title}
               </p>
               <div className='flex items-center justify-center mb-4 gap-x-4'>
@@ -98,7 +100,37 @@ export const Card = () => {
                 )}
               </p>
             </div>
-            <p>Githubs y website</p>
+            <div className='flex items-center justify-between'>
+              <div className='flex items-center gap-2'>
+                <a
+                  title={work.github2 ? 'Frontend repo' : 'Repository'}
+                  href={work.github}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Github className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
+                </a>
+                {work.github2 && (
+                  <a
+                    title='Backend repo'
+                    href={work.github2}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <Github className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
+                  </a>
+                )}
+              </div>
+              {work.website && (
+                <a
+                  href={work.website}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <Web className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
+                </a>
+              )}
+            </div>
           </div>
         </article>
       ))}
