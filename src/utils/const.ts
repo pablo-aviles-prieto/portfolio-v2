@@ -140,6 +140,7 @@ export const prevWorks: PrevWork[] = [
     descriptionEn:
       'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
+    subDescriptionEs: 'Solamente disponible en español',
     descriptionEs:
       'Juega con tus amigos en este juego (de dibujar y adivinar) parecido al pinturillo',
     techs: ['react', 'typescript', 'tailwind', 'socketio', 'nodejs'],

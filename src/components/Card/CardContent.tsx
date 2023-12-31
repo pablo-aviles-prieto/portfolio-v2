@@ -1,8 +1,9 @@
 import ZoomImage from 'react-medium-image-zoom';
+import { useContext } from 'react';
 import { PrevWork } from '../../interfaces';
 import { techs } from '../../utils/const';
 import { Github, Web, Close } from '../svgs';
-
+import { LanguageContext } from '../../store/LanguageContext';
 import 'react-medium-image-zoom/dist/styles.css';
 
 type Props = {
@@ -10,6 +11,8 @@ type Props = {
 };
 
 export const CardContent = ({ work }: Props) => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div key={work.title} className='overflow-hidden glow-card'>
       <div className='glows' />
@@ -37,9 +40,14 @@ export const CardContent = ({ work }: Props) => {
             })}
           </div>
           <p>
-            {work.descriptionEn}{' '}
+            {language === 'en' ? work.descriptionEn : work.descriptionEs}{' '}
             {work.subDescriptionEn && (
-              <span className='text-xs italic'>*{work.subDescriptionEn}</span>
+              <span className='text-xs italic'>
+                *
+                {language === 'en'
+                  ? work.subDescriptionEn
+                  : work.subDescriptionEs}
+              </span>
             )}
           </p>
         </div>
