@@ -11,7 +11,7 @@ import {
 import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
 import { RenderTimelineItems } from './components/RenderTimeLineItems';
 import { TimelineLegend } from './components/TimelineLegend';
-import { Card } from './components/Card';
+import { Card } from './components/Card/Card';
 
 function App() {
   const timelineTotalWidth =
@@ -20,6 +20,7 @@ function App() {
   const evenTimelineData = getEvenItemsFromArray(timelineData);
   const oddTimelineData = getOddItemsFromArray(timelineData);
 
+  // TODO: Add both languages
   return (
     <div className='bg-shady-dark-blue-1'>
       <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>

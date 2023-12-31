@@ -27,7 +27,7 @@
   initial-value: 0;
 }
 
-.container {
+.container-glow {
   --spread: 60;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -37,7 +37,7 @@
   touch-action: none;
 }
 
-article {
+.glow-card {
   --active: 0.15;
   --start: 0;
   height: 100%;
@@ -49,7 +49,7 @@ article {
   position: relative;
 }
 
-article:is(:hover, :focus-visible) {
+.glow-card:is(:hover, :focus-visible) {
   z-index: 2;
 }
 
@@ -83,7 +83,7 @@ article:is(:hover, :focus-visible) {
   transition: opacity 1s;
 }
 
-article::before {
+.glow-card::before {
   position: absolute;
   inset: 0;
   border: var(--border-width) solid transparent;
@@ -110,7 +110,7 @@ article::before {
   transition: opacity 1s;
 }
 
-article::after {
+.glow-card::after {
   --bg-size: 100%;
   content: '';
   pointer-events: none;
