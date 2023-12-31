@@ -79,12 +79,35 @@ function App() {
             </div>
           </div>
         </Controller>
-        <div className='-mt-16 text-4xl font-bold text-center'>
-          <h1 className='inline-block text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
-            Previous works
-          </h1>
+        <div className='-mt-16 text-center'>
+          <Controller>
+            <Scene
+              duration={800}
+              triggerHook={0.95}
+              indicators={true}
+              classToggle='overflow-hidden'
+            >
+              <Timeline
+                target={
+                  <div className='opacity-0'>
+                    <h1 className='inline-block text-4xl font-bold text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
+                      Previous works
+                    </h1>
+                    <div className='text-left'>
+                      <Card />
+                    </div>
+                  </div>
+                }
+              >
+                <Tween
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1 }}
+                  duration={0.1}
+                />
+              </Timeline>
+            </Scene>
+          </Controller>
         </div>
-        <Card />
       </div>
     </div>
   );

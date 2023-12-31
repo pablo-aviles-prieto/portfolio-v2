@@ -30,7 +30,7 @@
 .container {
   --spread: 60;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: calc(var(--gap) * 1px);
   margin: 0 auto;
   place-items: center;
