@@ -1,5 +1,5 @@
 import { Header } from './Header';
-import { BlobWithImage } from './svgs/BlobWithImage';
+import { BlobWithImage } from './svgs';
 
 export const HeroSection = () => {
   return (

@@ -1,8 +1,7 @@
 import { useContext } from 'react';
 import { FlagContainer } from './styles/FlagContainer';
-import { SpanishFlag } from './svgs/SpanishFlag';
 import { LanguageContext } from '../store/LanguageContext';
-import { UkFlag } from './svgs/UkFlag';
+import { UkFlag, SpanishFlag } from './svgs';
 
 export const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);

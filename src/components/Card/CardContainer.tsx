@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { prevWorks } from '../../utils/const';
 import { CardContent } from './CardContent';
 
-export const Card = () => {
+export const CardContainer = () => {
   const containerRef = useRef<any>(null);
   const config = {
     proximity: 40,
@@ -62,7 +62,6 @@ export const Card = () => {
     };
   }, [config]);
 
-  // TODO: Add zoom into the image
   return (
     <div ref={containerRef} className='container-glow'>
       {prevWorks.map((work) => (

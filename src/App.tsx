@@ -11,7 +11,7 @@ import {
 import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
 import { RenderTimelineItems } from './components/RenderTimeLineItems';
 import { TimelineLegend } from './components/TimelineLegend';
-import { Card } from './components/Card/Card';
+import { CardContainer } from './components/Card/CardContainer';
 
 function App() {
   const timelineTotalWidth =
@@ -95,7 +95,7 @@ function App() {
                       Previous works
                     </h1>
                     <div className='text-left'>
-                      <Card />
+                      <CardContainer />
                     </div>
                   </div>
                 }

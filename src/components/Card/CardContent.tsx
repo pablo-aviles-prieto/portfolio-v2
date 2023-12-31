@@ -1,7 +1,9 @@
+import ZoomImage from 'react-medium-image-zoom';
 import { PrevWork } from '../../interfaces';
 import { techs } from '../../utils/const';
-import { Github } from '../svgs/Github';
-import { Web } from '../svgs/Web';
+import { Github, Web, Close } from '../svgs';
+
+import 'react-medium-image-zoom/dist/styles.css';
 
 type Props = {
   work: PrevWork;
@@ -11,18 +13,18 @@ export const CardContent = ({ work }: Props) => {
   return (
     <div key={work.title} className='overflow-hidden glow-card'>
       <div className='glows' />
-      {work.image && (
-        <div
-          className='w-[400px] h-[225px] flex border-t border-x 
+      <div
+        className='w-[400px] h-[225px] flex border-t border-x 
       border-transparent justify-center items-center overflow-hidden'
-        >
+      >
+        <ZoomImage IconUnzoom={Close}>
           <img
             src={`/images/prev-works/${work.image}`}
             alt={work.title}
-            className='w-[100%] h-[100%] object-cover'
+            style={{ height: '225px', width: '400px' }}
           />
-        </div>
-      )}
+        </ZoomImage>
+      </div>
       <div className='flex flex-col justify-between h-[calc(100%-225px)] p-4 text-base'>
         <div>
           <p className='mb-6 text-xl text-[22px] font-bold tracking-wider text-center text-vibrant-orange-1'>
