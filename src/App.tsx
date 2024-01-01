@@ -11,7 +11,8 @@ import {
 import { getOddItemsFromArray } from './utils/getOddItemsFromArray';
 import { RenderTimelineItems } from './components/RenderTimeLineItems';
 import { TimelineLegend } from './components/TimelineLegend';
-import { CardContainer } from './components/Card/CardContainer';
+import { CardContainer } from './components/card/CardContainer';
+import { ContactForm } from './components/ContactForm';
 
 function App() {
   const timelineTotalWidth =
@@ -108,6 +109,14 @@ function App() {
               </Timeline>
             </Scene>
           </Controller>
+        </div>
+        <div className='mt-24 mb-4 text-center'>
+          <h1 className='inline-block text-4xl font-bold text-center text-transparent bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
+            Contact me
+          </h1>
+        </div>
+        <div className='pb-8'>
+          <ContactForm />
         </div>
       </div>
     </div>
