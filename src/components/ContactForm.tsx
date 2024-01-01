@@ -1,8 +1,9 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { Input, Textarea } from './styles/form';
 import { isValidatedContactForm } from '../utils/isValidatedContactForm';
 import { Select } from './styles/form/Select';
 import { useForm } from '@formspree/react';
+import toast from 'react-hot-toast';
 
 export const CONTACT_FORM_INIT_VALUES = {
   name: '',
@@ -29,10 +30,20 @@ export const ContactForm = () => {
   const [formErrors, setFormErrors] = useState<typeof CONTACT_FORM_INIT_VALUES>(
     CONTACT_FORM_INIT_VALUES
   );
-  const [submitState, handleSubmitPromise] = useForm(fromSpreeId);
+  const [toastId, setToastId] = useState<string | null>(null);
+  const [submitState, handleSubmitPromise] = useForm(fromSpreeId + 'tas');
 
-  console.log('formData', formData);
-  console.log('submitState', submitState);
+  useEffect(() => {
+    if (!toastId) return;
+    if (submitState.succeeded) {
+      toast.success(`I'll be in touch as soon as possible 🤗`, { id: toastId });
+    } else if (submitState?.errors) {
+      toast.error(
+        'There was an error sending the contact info. Try again later 😓',
+        { id: toastId }
+      );
+    }
+  }, [submitState, toastId]);
 
   const handleInputChange = ({
     value,
@@ -46,10 +57,12 @@ export const ContactForm = () => {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const toastId = toast.loading('Sending info...');
+    setToastId(toastId);
 
     const isValidated = isValidatedContactForm({ formData, setFormErrors });
     if (!isValidated) {
-      // TODO: Add an error toast
+      toast.error('Fill all the form inputs 🥺', { id: toastId });
       return;
     }
 
@@ -60,6 +73,9 @@ export const ContactForm = () => {
   return (
     <form onSubmit={(e) => onSubmit(e)}>
       <div className='max-w-xl px-2 mx-auto sm:px-0'>
+        <button type='button' onClick={() => toast.loading('Loading...')}>
+          Make me a toast
+        </button>
         <Input
           id='name'
           name='name'
