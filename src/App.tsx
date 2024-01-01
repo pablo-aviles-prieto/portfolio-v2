@@ -13,8 +13,11 @@ import { RenderTimelineItems } from './components/RenderTimeLineItems';
 import { TimelineLegend } from './components/TimelineLegend';
 import { CardContainer } from './components/card/CardContainer';
 import { ContactForm } from './components/ContactForm';
+import { useContext } from 'react';
+import { LanguageContext } from './store/LanguageContext';
 
 function App() {
+  const { language } = useContext(LanguageContext);
   const timelineTotalWidth =
     (TIMELINE_SLOT_WIDTH + TIMELINE_SLOT_MARGIN) * timelineData.length - 50;
 
@@ -93,7 +96,9 @@ function App() {
                 target={
                   <div className='opacity-0'>
                     <h1 className='inline-block text-4xl font-bold text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
-                      Previous works
+                      {language === 'en'
+                        ? 'Personal projects'
+                        : 'Proyectos personales'}
                     </h1>
                     <div className='text-left'>
                       <CardContainer />
@@ -112,7 +117,7 @@ function App() {
         </div>
         <div className='mt-24 mb-4 text-center'>
           <h1 className='inline-block text-4xl font-bold text-center text-transparent bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
-            Contact me
+            {language === 'en' ? 'Contact me' : 'Contáctame'}
           </h1>
         </div>
         <div className='pb-8'>
