@@ -1,30 +1,22 @@
 import { ChangeEvent } from 'react';
 
-type InputType = 'email' | 'password' | 'text';
-
-interface InputProps {
+interface SelectProps {
   id: string;
-  type: InputType;
-  placeholder: string;
-  name: string;
+  options: string[];
   label: string;
-  value: string;
   containerClasses?: string;
   hasError?: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-export const Input = ({
+export const Select = ({
   id,
-  type,
-  placeholder,
+  options,
   label,
-  name,
-  value,
   containerClasses = '',
   hasError = false,
   onChange,
-}: InputProps) => {
+}: SelectProps) => {
   return (
     <div className={`group relative w-auto ${containerClasses}`}>
       <label
@@ -39,20 +31,22 @@ export const Input = ({
       >
         {label}
       </label>
-      <input
-        name={name}
-        value={value}
-        placeholder={placeholder}
+      <select
         id={id}
-        type={type}
         onChange={onChange}
-        className={`h-10 w-full rounded-md bg-gray-50 px-4
+        className={`h-10 w-full appearance-none rounded-md bg-gray-50 px-4
         outline-none drop-shadow-sm transition-all duration-200 
         ease-in-out focus:bg-white focus:ring-muted-shady-red-0
         text-slate-800 placeholder-slate-500 ${
           hasError ? 'border-2 border-red-600 focus:ring-0' : 'focus:ring-2'
         }`}
-      />
+      >
+        {options.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };

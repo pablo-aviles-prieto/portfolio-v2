@@ -4,6 +4,8 @@ interface InputProps {
   id: string;
   placeholder: string;
   label: string;
+  value: string;
+  name: string;
   rows?: number;
   containerClasses?: string;
   hasError?: boolean;
@@ -14,6 +16,8 @@ export const Textarea = ({
   id,
   placeholder,
   label,
+  value,
+  name,
   rows = 5,
   containerClasses = '',
   hasError = false,
@@ -34,9 +38,11 @@ export const Textarea = ({
         {label}
       </label>
       <textarea
+        name={name}
         placeholder={placeholder}
         id={id}
         rows={rows}
+        value={value}
         onChange={onChange}
         className={`w-full rounded-md bg-gray-50 px-4 outline-none drop-shadow-sm focus:bg-white 
         focus:ring-muted-shady-red-0 text-slate-800 placeholder-slate-500

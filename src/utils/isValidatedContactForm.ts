@@ -1,12 +1,16 @@
-import { FORM_PLAYER_INIT_VALUES } from '../components/ContactForm';
+import {
+  CONTACT_FORM_ERR_VALUES,
+  CONTACT_FORM_INIT_VALUES,
+} from '../components/ContactForm';
 
-type FormErrors = typeof FORM_PLAYER_INIT_VALUES;
+type FormErrors = typeof CONTACT_FORM_INIT_VALUES;
 
 type Params = {
-  formData: typeof FORM_PLAYER_INIT_VALUES;
+  formData: typeof CONTACT_FORM_INIT_VALUES;
   setFormErrors: (errors: FormErrors) => void;
 };
 
+// TODO: Use both languages
 export const isValidatedContactForm = ({ formData, setFormErrors }: Params) => {
   const errorMessages: Record<keyof typeof formData, string> = {
     name: 'Name is required',
@@ -15,7 +19,7 @@ export const isValidatedContactForm = ({ formData, setFormErrors }: Params) => {
     message: 'Message is required',
   };
 
-  const errors: FormErrors = { ...FORM_PLAYER_INIT_VALUES };
+  const errors: FormErrors = { ...CONTACT_FORM_ERR_VALUES };
 
   Object.keys(formData).forEach((key) => {
     const field = key as keyof typeof formData;
