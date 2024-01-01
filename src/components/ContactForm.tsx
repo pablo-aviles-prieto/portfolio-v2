@@ -1,9 +1,10 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { type FormEvent, useContext, useEffect, useState } from 'react';
 import { Input, Textarea } from './styles/form';
 import { isValidatedContactForm } from '../utils/isValidatedContactForm';
 import { Select } from './styles/form/Select';
 import { useForm } from '@formspree/react';
 import toast from 'react-hot-toast';
+import { LanguageContext } from '../store/LanguageContext';
 
 export const CONTACT_FORM_INIT_VALUES = {
   name: '',
@@ -22,7 +23,7 @@ export const CONTACT_FORM_ERR_VALUES = {
 const { VITE_FORMSPREE_ID } = import.meta.env;
 const fromSpreeId = VITE_FORMSPREE_ID || '';
 
-// TODO: Use both languages
+// TODO: Add animation for each input to come from different sides of the page
 export const ContactForm = () => {
   const [formData, setFormData] = useState<typeof CONTACT_FORM_INIT_VALUES>(
     CONTACT_FORM_INIT_VALUES
@@ -31,19 +32,27 @@ export const ContactForm = () => {
     CONTACT_FORM_INIT_VALUES
   );
   const [toastId, setToastId] = useState<string | null>(null);
-  const [submitState, handleSubmitPromise] = useForm(fromSpreeId + 'tas');
+  const [submitState, handleSubmitPromise] = useForm(fromSpreeId);
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     if (!toastId) return;
     if (submitState.succeeded) {
-      toast.success(`I'll be in touch as soon as possible 🤗`, { id: toastId });
+      toast.success(
+        language === 'en'
+          ? `I'll be in touch as soon as possible 🤗`
+          : `Le contactaré lo antes posible 🤗`,
+        { id: toastId }
+      );
     } else if (submitState?.errors) {
       toast.error(
-        'There was an error sending the contact info. Try again later 😓',
+        language === 'en'
+          ? 'There was an error sending the contact info. Try again later 😓'
+          : 'Hubo un error al enviar la información de contacto. Inténtelo más tarde 😓',
         { id: toastId }
       );
     }
-  }, [submitState, toastId]);
+  }, [submitState, toastId, language]);
 
   const handleInputChange = ({
     value,
@@ -57,12 +66,19 @@ export const ContactForm = () => {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const toastId = toast.loading('Sending info...');
+    const toastId = toast.loading(
+      language === 'en' ? 'Sending info...' : 'Enviando info...'
+    );
     setToastId(toastId);
 
     const isValidated = isValidatedContactForm({ formData, setFormErrors });
     if (!isValidated) {
-      toast.error('Fill all the form inputs 🥺', { id: toastId });
+      toast.error(
+        language === 'en'
+          ? 'Fill all the form inputs 🥺'
+          : 'Rellena todos los inputs 🥺',
+        { id: toastId }
+      );
       return;
     }
 
@@ -73,15 +89,12 @@ export const ContactForm = () => {
   return (
     <form onSubmit={(e) => onSubmit(e)}>
       <div className='max-w-xl px-2 mx-auto sm:px-0'>
-        <button type='button' onClick={() => toast.loading('Loading...')}>
-          Make me a toast
-        </button>
         <Input
           id='name'
           name='name'
           type='text'
-          label='Name'
-          placeholder='name...'
+          label={language === 'en' ? 'Name' : 'Nombre'}
+          placeholder={language === 'en' ? 'Name...' : 'Nombre...'}
           value={formData.name}
           containerClasses='my-4'
           hasError={!!formErrors.name}
@@ -91,7 +104,11 @@ export const ContactForm = () => {
         />
         <Select
           id='contact-method'
-          label='Preferred Contact Method'
+          label={
+            language === 'en'
+              ? 'Preferred Contact Method'
+              : 'Método de contacto preferido'
+          }
           containerClasses='my-4'
           options={['Email', 'LinkedIn']}
           onChange={(e) =>
@@ -102,12 +119,18 @@ export const ContactForm = () => {
           id='contact-info'
           name='contact-info'
           type={formData.contactMethod === 'Email' ? 'email' : 'text'}
-          label='Contact information'
+          label={
+            language === 'en'
+              ? 'Contact information'
+              : 'Información de contacto'
+          }
           value={formData.contactInfo}
           placeholder={
             formData.contactMethod === 'Email'
-              ? 'email...'
-              : 'linkedin profile...'
+              ? 'Email...'
+              : language === 'en'
+              ? 'Linkedin profile...'
+              : 'Perfil de linkedin...'
           }
           containerClasses='my-4'
           hasError={!!formErrors.contactInfo}
@@ -118,9 +141,9 @@ export const ContactForm = () => {
         <Textarea
           id='message'
           name='message'
-          label='Message'
+          label={language === 'en' ? 'Message' : 'Mensaje'}
           value={formData.message}
-          placeholder='message...'
+          placeholder={language === 'en' ? 'Message...' : 'Mensaje...'}
           containerClasses='my-4'
           rows={3}
           hasError={!!formErrors.message}
@@ -178,7 +201,13 @@ export const ContactForm = () => {
                 ></path>
               </svg>
             )}
-            {submitState.submitting ? 'Sending...' : 'Submit'}
+            {submitState.submitting
+              ? language === 'es'
+                ? 'Enviando...'
+                : 'Sending...'
+              : language === 'es'
+              ? 'Enviar'
+              : 'Submit'}
           </span>
         </button>
       </div>

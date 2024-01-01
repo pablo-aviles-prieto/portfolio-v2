@@ -5,6 +5,7 @@ import { UkFlag, SpanishFlag } from './svgs';
 
 export const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
+  // TODO: When changing language, store it on the localStorage
   // TODO: Add hover color to the sections links
   // TODO: Add gradient to the Pablo Avilés?
   return (
