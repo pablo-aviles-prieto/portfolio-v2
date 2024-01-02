@@ -15,6 +15,7 @@ import {
   Remix,
 } from '../components/svgs/technologies';
 
+// TODO: Improve the text on both languages (specially for latest dev works)
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',

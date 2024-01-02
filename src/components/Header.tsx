@@ -9,7 +9,7 @@ export const Header = () => {
     <div className='flex items-center justify-between pt-6'>
       <p className='text-3xl font-bold text-muted-shady-red-0'>Pablo Avilés</p>
       <div className='flex text-lg gap-x-10'>
-        <a className='hover-effect' href='#timeline-bottom-side'>
+        <a className='hover-effect' href='#professional-trajectory'>
           {language === 'es'
             ? 'Trayectoria profesional'
             : 'Professional trajectory'}

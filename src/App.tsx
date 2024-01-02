@@ -43,7 +43,7 @@ function App() {
                   target={
                     <div style={{ width: `${timelineTotalWidth}px` }}>
                       <div
-                        id='timeline-top-side'
+                        id='professional-trajectory-top'
                         className='flex border-muted-shady-red-0 min-h-[332px] max-h-[332px]'
                         style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                       >
@@ -53,7 +53,7 @@ function App() {
                         />
                       </div>
                       <div
-                        id='timeline-bottom-side'
+                        id='professional-trajectory'
                         className='flex min-h-[350px] max-h-[350px]'
                       >
                         <RenderTimelineItems
