@@ -37,7 +37,7 @@ export const Select = ({
         className={`h-10 w-full appearance-none rounded-md bg-gray-50 px-4
         outline-none drop-shadow-sm transition-all duration-200 
         ease-in-out focus:bg-white focus:ring-muted-shady-red-0
-        text-slate-800 placeholder-slate-500 ${
+        text-slate-900 placeholder-slate-500 ${
           hasError ? 'border-2 border-red-600 focus:ring-0' : 'focus:ring-2'
         }`}
       >

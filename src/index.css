@@ -9,6 +9,33 @@
   --color-muted-shady-red: #de6159;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.hover-effect {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: var(--color-muted-shady-red);
+  transition: width 0.4s, left 0.4s;
+}
+
+.hover-effect:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 .timeline-card-top::before,
 .timeline-card-bottom::before {
   content: '';

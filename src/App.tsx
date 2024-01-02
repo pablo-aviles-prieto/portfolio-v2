@@ -94,7 +94,7 @@ function App() {
             >
               <Timeline
                 target={
-                  <div className='opacity-0'>
+                  <div id='personal-projects' className='opacity-0'>
                     <h1 className='inline-block text-4xl font-bold text-center text-transparent mb-14 bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
                       {language === 'en'
                         ? 'Personal projects'
@@ -115,7 +115,7 @@ function App() {
             </Scene>
           </Controller>
         </div>
-        <div className='mt-24 mb-4 text-center'>
+        <div id='contact-me' className='mt-24 mb-4 text-center'>
           <h1 className='inline-block text-4xl font-bold text-center text-transparent bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
             {language === 'en' ? 'Contact me' : 'Contáctame'}
           </h1>

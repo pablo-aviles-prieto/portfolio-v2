@@ -4,27 +4,32 @@ import { LanguageContext } from '../store/LanguageContext';
 import { UkFlag, SpanishFlag } from './svgs';
 
 export const Header = () => {
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { language, changeLanguage } = useContext(LanguageContext);
   // TODO: When changing language, store it on the localStorage
-  // TODO: Add hover color to the sections links
-  // TODO: Add gradient to the Pablo Avilés?
   return (
     <div className='flex items-center justify-between pt-6'>
-      <p className='text-3xl font-bold text-muted-shady-red-1'>Pablo Avilés</p>
+      <p className='text-3xl font-bold text-muted-shady-red-0'>Pablo Avilés</p>
       <div className='flex text-lg gap-x-10'>
-        <p>About me</p>
-        <p>Timeline</p>
-        <p>Previous works</p>
-        <p>Contact me</p>
+        <a className='hover-effect' href='#timeline-bottom-side'>
+          {language === 'es'
+            ? 'Trayectoria profesional'
+            : 'Professional trajectory'}
+        </a>
+        <a className='hover-effect' href='#personal-projects'>
+          {language === 'es' ? 'Proyectos personales' : 'Personal projects'}
+        </a>
+        <a className='hover-effect' href='#contact-me'>
+          {language === 'es' ? 'Contáctame' : 'Contact me'}
+        </a>
         <div className='flex items-center gap-2'>
           <FlagContainer
-            onClick={() => setLanguage('es')}
+            onClick={() => changeLanguage('es')}
             grayscale={language !== 'es'}
           >
             <SpanishFlag width={20} height={20} />
           </FlagContainer>
           <FlagContainer
-            onClick={() => setLanguage('en')}
+            onClick={() => changeLanguage('en')}
             grayscale={language !== 'en'}
           >
             <UkFlag width={20} height={20} />

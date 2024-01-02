@@ -1,6 +1,7 @@
 import { Header } from './Header';
 import { BlobWithImage } from './svgs';
 
+// TODO: Add some animations?
 export const HeroSection = () => {
   return (
     <div className='relative h-screen'>
