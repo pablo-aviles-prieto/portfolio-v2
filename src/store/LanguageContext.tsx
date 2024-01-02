@@ -1,5 +1,4 @@
-import { useState, createContext } from 'react';
-import type { ReactNode } from 'react';
+import { type ReactNode, useState, createContext } from 'react';
 
 type Props = {
   children: ReactNode;
@@ -8,7 +7,6 @@ type Props = {
 type LanguageContextType = {
   language: 'es' | 'en';
   changeLanguage: (lang: 'en' | 'es') => void;
-  // changeLanguage: Dispatch<SetStateAction<'es' | 'en'>>;
 };
 
 const defaultLanguageContext: LanguageContextType = {
@@ -20,9 +18,13 @@ export const LanguageContext = createContext<LanguageContextType>(
   defaultLanguageContext
 );
 
-// TODO: Before checking it from the navigator, check from localStorage
 export const LanguageProvider = ({ children }: Props) => {
-  const defaultLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
+  const storedLanguage = localStorage.getItem('portfolioLang') as
+    | 'es'
+    | 'en'
+    | null;
+  const defaultLanguage =
+    storedLanguage || (navigator.language.startsWith('es') ? 'es' : 'en');
   const [language, setLanguage] = useState<'es' | 'en'>(defaultLanguage);
 
   const changeLanguage = (lang: 'en' | 'es') => {

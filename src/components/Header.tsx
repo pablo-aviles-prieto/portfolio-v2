@@ -5,7 +5,6 @@ import { UkFlag, SpanishFlag } from './svgs';
 
 export const Header = () => {
   const { language, changeLanguage } = useContext(LanguageContext);
-  // TODO: When changing language, store it on the localStorage
   return (
     <div className='flex items-center justify-between pt-6'>
       <p className='text-3xl font-bold text-muted-shady-red-0'>Pablo Avilés</p>
