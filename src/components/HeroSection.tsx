@@ -1,7 +1,8 @@
 import { Header } from './Header';
 import { BlobWithImage } from './svgs';
 
-// TODO: Add some animations?
+// TODO: Add some animations
+// TODO: Add spanish lang
 export const HeroSection = () => {
   return (
     <div className='relative h-screen'>
@@ -11,7 +12,7 @@ export const HeroSection = () => {
       {/* TODO: Remove waves on mobile/tablet devices? */}
       <div className='waves' />
       <div className='flex items-center justify-center h-[80%] gap-x-8 text-xl text-[21px]'>
-        {/* TODO: Add Linkeding and github SVGs/links */}
+        {/* TODO: Add Linkedin and github SVGs/links */}
         <p className='w-[50%] text-right'>
           <span className='block'>
             🤗 Hi there, I'm{' '}

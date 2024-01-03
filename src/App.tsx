@@ -36,7 +36,7 @@ function App() {
                 duration={6000}
                 triggerHook={0.05}
                 pin={{ pushFollowers: false }}
-                indicators={true}
+                // indicators={true}
                 classToggle='overflow-hidden'
               >
                 <Timeline
@@ -89,7 +89,6 @@ function App() {
             <Scene
               duration={800}
               triggerHook={0.95}
-              indicators={true}
               classToggle='overflow-hidden'
             >
               <Timeline
@@ -115,12 +114,22 @@ function App() {
             </Scene>
           </Controller>
         </div>
-        <div id='contact-me' className='mt-24 mb-4 text-center'>
-          <h1 className='inline-block text-4xl font-bold text-center text-transparent bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
-            {language === 'en' ? 'Contact me' : 'Contáctame'}
-          </h1>
-        </div>
-        <div className='pb-8'>
+        <Controller>
+          <Scene duration={400} triggerHook={0.8} indicators>
+            <Timeline
+              target={
+                <div id='contact-me' className='mt-24 mb-4 text-center'>
+                  <h1 className='inline-block text-4xl font-bold text-center text-transparent bg-gradient-to-r from-muted-shady-red-0 via-muted-shady-red-1 to-muted-shady-red-0 bg-clip-text'>
+                    {language === 'en' ? 'Contact me' : 'Contáctame'}
+                  </h1>
+                </div>
+              }
+            >
+              <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} duration={1} />
+            </Timeline>
+          </Scene>
+        </Controller>
+        <div className='min-h-[555px]'>
           <ContactForm />
         </div>
       </div>
