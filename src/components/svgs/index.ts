@@ -5,3 +5,5 @@ export * from './SpanishFlag';
 export * from './UkFlag';
 export * from './Web';
 export * from './technologies';
+export * from './LinkedinIcon';
+export * from './GithubIcon';

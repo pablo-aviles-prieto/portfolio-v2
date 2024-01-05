@@ -24,7 +24,6 @@ export const CONTACT_FORM_ERR_VALUES = {
 const { VITE_FORMSPREE_ID } = import.meta.env;
 const fromSpreeId = VITE_FORMSPREE_ID || '';
 
-// TODO: Add Linkedin and github SVGs/links
 export const ContactForm = () => {
   const [formData, setFormData] = useState<typeof CONTACT_FORM_INIT_VALUES>(
     CONTACT_FORM_INIT_VALUES

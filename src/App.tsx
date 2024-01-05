@@ -15,6 +15,7 @@ import { CardContainer } from './components/card/CardContainer';
 import { ContactForm } from './components/ContactForm';
 import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
+import { GithubIcon, LinkedinIcon } from './components/svgs';
 
 function App() {
   const { language } = useContext(LanguageContext);
@@ -115,7 +116,7 @@ function App() {
           </Controller>
         </div>
         <Controller>
-          <Scene duration={400} triggerHook={0.8} indicators>
+          <Scene duration={400} triggerHook={0.8}>
             <Timeline
               target={
                 <div id='contact-me' className='mt-24 mb-4 text-center'>
@@ -131,6 +132,13 @@ function App() {
         </Controller>
         <div className='min-h-[555px]'>
           <ContactForm />
+          <div className='flex items-center justify-center mt-2 gap-x-2 text-inherit'>
+            {/* TODO: Add opacity animation */}
+            {/* TODO: Set a grey filter and colors on hover */}
+            {/* TODO: Add link to my profiles */}
+            <LinkedinIcon className='w-12 h-12' />
+            <GithubIcon className='w-12 h-12' />
+          </div>
         </div>
       </div>
     </div>
