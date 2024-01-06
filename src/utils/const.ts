@@ -15,13 +15,12 @@ import {
   Remix,
 } from '../components/svgs/technologies';
 
-// TODO: Improve the text on both languages (specially for latest dev works)
 export const timelineData = [
   {
     year: '2012\n\r-\n\r2014',
     text: {
-      en: 'Studied Higher Technician in Computer Network Systems Management',
-      es: 'Estudié el ciclo superior en administración de sistemas en red',
+      en: `<span class="highlight">Studied</span> Higher Technician in <span class="emphasize">Computer Network Systems Management</span>`,
+      es: '<span class="highlight">Estudié</span> el ciclo superior en <span class="emphasize">administración de sistemas en red</span>',
     },
     subtitle: {
       en: 'IES Fernando Wirtz, A Coruña, Spain',
@@ -32,8 +31,8 @@ export const timelineData = [
   {
     year: '2014',
     text: {
-      en: 'Internship of the computer network systems management studies',
-      es: 'Prácticas de los estudios de administración de sistemas en red',
+      en: '<span class="highlight">Internship</span> of the <span class="emphasize">computer network systems management</span> studies',
+      es: '<span class="highlight">Prácticas</span> de los estudios de <span class="emphasize">administración de sistemas en red</span>',
     },
     subtitle: { en: 'CHUAC, A Coruña, Spain', es: 'CHUAC, A Coruña, España' },
     type: 'it',
@@ -41,8 +40,8 @@ export const timelineData = [
   {
     year: '2015\n\r-\n\r2016',
     text: {
-      en: 'Remote technical support to companies and individuals troubleshooting hardware and software incidents for Dell computers, laptops and servers',
-      es: 'Soporte técnico informático en remoto a empresas y particulares resolviendo incidencias de hardware y software en ordenadores y servidores de la compañía Dell',
+      en: 'Remote <span class="highlight">technical support</span> to companies and individuals <span class="emphasize">troubleshooting hardware and software incidents for Dell</span> computers, laptops and servers',
+      es: '<span class="highlight">Soporte técnico informático</span> en remoto a empresas y particulares resolviendo <span class="emphasize">incidencias de hardware y software</span> en ordenadores y servidores de la compañía <span class="emphasize">Dell</span>',
     },
     subtitle: {
       en: 'Convergys, A Coruña, Spain',
@@ -53,8 +52,8 @@ export const timelineData = [
   {
     year: '2016\n\r-\n\r2019',
     text: {
-      en: 'Professional esports player in the game Counter-Strike: Global Offensive (CS:GO), for Baskonia Atlantis, Team Heretics, and Arctic Gaming',
-      es: 'Jugador profesional de esports en el juego Counter-Strike: Global offensive (CS:GO), para Baskonia Atlantis, Team Heretics y Arctic Gaming',
+      en: '<span class="highlight">Professional esports player</span> in the game <span class="emphasize">Counter-Strike: Global Offensive (CS:GO)</span>, for Baskonia Atlantis, Team Heretics, and Arctic Gaming',
+      es: '<span class="highlight">Jugador profesional de esports</span> en el juego <span class="emphasize">Counter-Strike: Global offensive (CS:GO)</span>, para Baskonia Atlantis, Team Heretics y Arctic Gaming',
     },
     subtitle: {
       en: 'Remote, Spain',
@@ -65,8 +64,8 @@ export const timelineData = [
   {
     year: '2019\n\r-\n\r2022',
     text: {
-      en: 'Remote technical support orientated to networking and systems to companies in two Internet Service Providers (Mundo-r and Telecable)',
-      es: 'Soporte técnico de sistemas y telecomunicaciones en remoto para grandes cuentas de los clientes Mundo-R y Telecable (proveedores de servicios de internet)',
+      en: 'Remote <span class="highlight">technical support</span> orientated to <span class="highlight">networking and systems</span> to companies in two <span class="emphasize">Internet Service Providers</span> (Mundo-r and Telecable)',
+      es: '<span class="highlight">Soporte técnico de sistemas y telecomunicaciones</span> en remoto para grandes cuentas de los clientes Mundo-R y Telecable (<span class="emphasize">proveedores de servicios de internet</span>)',
     },
     subtitle: {
       en: 'Indra, A Coruña, Spain',
@@ -77,8 +76,8 @@ export const timelineData = [
   {
     year: '2022',
     text: {
-      en: 'I have studied and obtained certifications in frontend and backend development, with a focus on React and JavaScript, through courses on Udemy and freeCodeCamp',
-      es: 'He estudiado y obtenido certificaciones en desarrollo frontend y backend, enfocándome en React y JavaScript, a través de cursos en Udemy y freeCodeCamp',
+      en: 'I have <span class="highlight">studied</span> and obtained certifications in <span class="highlight">frontend and backend development</span>, with a focus on React and JavaScript, through courses on <span class="emphasize">Udemy and freeCodeCamp</span>',
+      es: '<span class="highlight">Estudié</span> y obtuve certificaciones en <span class="highlight">desarrollo frontend y backend</span>, enfocándome en React y JavaScript, a través de cursos en <span class="emphasize">Udemy y freeCodeCamp</span>',
     },
     subtitle: {
       en: 'Udemy and freeCodeCamp',
@@ -89,8 +88,8 @@ export const timelineData = [
   {
     year: '2022\n\r-\n\r2023',
     text: {
-      en: 'Developing in both the backend and frontend, working with:\n\rFrontend: ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest and Cypress\n\rBackend: NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest and SuperTest',
-      es: 'Desarrollando tanto en el backend como en el frontend, trabajando con:\n\rFrontend: ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n\rBackend: NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
+      en: '<span class="highlight">Developing</span> in both the <span class="emphasize">backend and frontend</span>, working with:\n\r<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest and Cypress\n\r<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest and SuperTest',
+      es: '<span class="highlight">Desarrollando</span> tanto en el <span class="emphasize">backend</span> como en el <span class="emphasize">frontend</span>, trabajando con:\n\r<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n\r<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
     },
     subtitle: {
       en: 'OXYGEN, remote (Madrid), Spain',
@@ -101,8 +100,8 @@ export const timelineData = [
   {
     year: '2023',
     text: {
-      en: 'Frontend Developer specialized in React, TypeScript and Tailwind CSS. Creating dynamic web applications with a strong emphasis on design and user experience. Working with libraries like SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms. Conducting unit and e2e testing using Cypress, Jest, and MirageJS. Working under Agile Scrum methodologies with sprints and Kanban',
-      es: 'Desarrollador Frontend especializado en React, TypeScript y Tailwind CSS. Creando aplicaciones web dinámicas enfocadas en el diseño y la experiencia de usuario. Trabajando con librerías como SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms. Testing unitario y e2e utilizando Cypress, Jest y MirageJS. Trabajando bajo metodologías agile scrum con sprints y kanban',
+      en: '<span class="highlight">Frontend Developer</span> specialized in <span class="highlight">React, TypeScript and Tailwind CSS.</span> Creating dynamic web applications with a strong emphasis on design and user experience. Working with libraries like <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Conducting unit and e2e testing using <span class="emphasize">Cypress, Jest, and MirageJS.</span> Working under <span class="emphasize">Agile Scrum methodologies</span> with sprints and kanban',
+      es: '<span class="highlight">Desarrollador Frontend</span> especializado en <span class="highlight">React, TypeScript y Tailwind CSS.</span> Creando aplicaciones web dinámicas enfocadas en el diseño y la experiencia de usuario. Trabajando con librerías como <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Testing unitario y e2e utilizando <span class="emphasize">Cypress, Jest y MirageJS.</span> Trabajando bajo <span class="emphasize">metodologías Agile Scrum</span> con sprints y kanban',
     },
     subtitle: {
       en: 'Flat 101, remote (Zaragoza), Spain',
@@ -113,8 +112,8 @@ export const timelineData = [
   {
     year: '2023\n\r-\n\rPresent',
     text: {
-      en: 'Currently working, primarily using React and Node.js',
-      es: 'Trabajando actualmente, usando principalmente React y Nodejs',
+      en: '<span class="highlight">Currently working,</span> primarily using <span class="emphasize">React and Node.js</span>',
+      es: '<span class="highlight">Trabajando actualmente,</span> usando principalmente <span class="emphasize">React y Node.js</span>',
     },
     subtitle: {
       en: 'Ovixia, hybrid (A Coruña), Spain',

@@ -7,7 +7,7 @@ export const BlobWithImage = (props: SVGProps<SVGSVGElement>) => {
   useEffect(() => {
     gsap.from(imageRef.current, {
       opacity: 0,
-      y: 20,
+      y: 5,
       duration: 1.5,
     });
   }, []);
