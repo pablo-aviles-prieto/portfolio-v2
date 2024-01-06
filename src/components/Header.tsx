@@ -29,7 +29,7 @@ export const Header = () => {
           Pablo Avilés
         </p>
       )}
-      <div className='flex justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'>
+      <div className='flex items-center justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'>
         <a className='hover-effect' href='#professional-trajectory'>
           {language === 'es'
             ? 'Trayectoria profesional'
@@ -41,18 +41,18 @@ export const Header = () => {
         <a className='hover-effect' href='#contact-me'>
           {language === 'es' ? 'Contáctame' : 'Contact me'}
         </a>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 mt-1'>
           <FlagContainer
             onClick={() => changeLanguage('es')}
             grayscale={language !== 'es'}
           >
-            <SpanishFlag width={20} height={20} />
+            <SpanishFlag className='w-[16px] sm:w-[20px] h-[16px] sm:h-[20px]' />
           </FlagContainer>
           <FlagContainer
             onClick={() => changeLanguage('en')}
             grayscale={language !== 'en'}
           >
-            <UkFlag width={20} height={20} />
+            <UkFlag className='w-[16px] sm:w-[20px] h-[16px] sm:h-[20px]' />
           </FlagContainer>
         </div>
       </div>
