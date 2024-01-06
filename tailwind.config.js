@@ -16,7 +16,8 @@ export default {
         'bright-color-2': '#F7FAFE',
       },
       screens: {
-        xs: '450px',
+        xxs: '450px',
+        xs: '500px',
       },
     },
   },

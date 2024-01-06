@@ -21,7 +21,7 @@ export const HeroSection = () => {
       >
         <div className='w-full lg:w-[50%]'>
           <p
-            className='pt-16 lg:pt-0 text-center lg:text-right text-sm xs:text-base sm:text-xl 
+            className='pt-16 lg:pt-0 text-center lg:text-right text-sm xxs:text-base sm:text-xl 
             lg:text-[19px] xl:text-[22px]'
           >
             <span className='block'>

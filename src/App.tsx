@@ -17,6 +17,7 @@ import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
 import { SocialNetworks } from './components/SocialNetworks';
 
+// TODO: Style scrollbar
 function App() {
   const { language } = useContext(LanguageContext);
   const timelineTotalWidth =
