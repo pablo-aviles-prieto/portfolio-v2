@@ -30,7 +30,7 @@
 .container-glow {
   --spread: 60;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   gap: calc(var(--gap) * 1px);
   margin: 0 auto;
   place-items: center;
@@ -44,9 +44,20 @@
   background: var(--card);
   aspect-ratio: 330 / 400;
   border-radius: var(--border-radius);
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 370px;
+  max-width: 370px;
   position: relative;
+}
+
+@media (min-width: 425px) {
+  .container-glow {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .glow-card {
+    min-width: 400px;
+    max-width: 400px;
+  }
 }
 
 .glow-card:is(:hover, :focus-visible) {

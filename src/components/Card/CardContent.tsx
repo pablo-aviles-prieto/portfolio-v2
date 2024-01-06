@@ -28,9 +28,9 @@ export const CardContent = ({ work }: Props) => {
           />
         </ZoomImage>
       </div>
-      <div className='flex flex-col justify-between h-[calc(100%-225px)] p-4 text-base'>
+      <div className='flex flex-col justify-between h-[calc(100%-225px)] p-2 xxs:p-4 text-base'>
         <div>
-          <p className='mb-6 text-xl text-[22px] font-bold tracking-wider text-center text-vibrant-orange-1'>
+          <p className='mb-2 xxs:mb-6 text-xl text-[22px] font-bold tracking-wider text-center text-vibrant-orange-1'>
             {work.title}
           </p>
           <div className='flex items-center justify-center mb-4 gap-x-4'>
