@@ -16,7 +16,7 @@ export const SubmitBtn = ({ submitState, language }: Props) => {
       <button
         type='submit'
         disabled={submitState.submitting}
-        className={`relative items-center justify-center px-12 py-3 overflow-hidden font-medium text-center transition-all 
+        className={`relative items-center justify-center px-12 sm:px-16 py-3 overflow-hidden font-medium text-center transition-all 
     ${
       submitState.submitting ? 'bg-gray-400' : 'bg-white hover:bg-white group'
     } rounded`}

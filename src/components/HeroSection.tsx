@@ -60,11 +60,11 @@ export const HeroSection = () => {
         <div className='w-full lg:w-[50%] h-full relative'>
           <BlobWithImage
             className='absolute w-[685px] h-[80%] sm:h-full left-[calc(50%-(685px/2))] 
-            lg:-left-[85px] sm:bottom-[15px]'
+            lg:-left-[85px] top-[25px] sm:top-0 sm:bottom-[15px]'
           />
         </div>
       </div>
-      <div className='mt-4 text-2xl font-bold text-center'>
+      <div className='text-lg font-bold text-center sm:mt-4 sm:text-2xl'>
         <p className='inline-block text-transparent bg-gradient-to-r from-muted-shady-red-1 via-muted-shady-red-0 to-muted-shady-red-1 bg-clip-text'>
           {language === 'es'
             ? `Sigue bajando para conocer más sobre mí`

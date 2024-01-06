@@ -16,14 +16,14 @@ export const SocialNetworks = () => {
         target='_blank'
         rel='noopener noreferrer'
       >
-        <LinkedinIcon className='w-12 h-12 hover:scale-105' />
+        <LinkedinIcon className='w-8 h-8 xs:w-12 xs:h-12 hover:scale-105' />
       </a>
       <a
         href='https://github.com/Pablo-Aviles-Prieto'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <GithubIcon className='w-12 h-12 hover:scale-105' />
+        <GithubIcon className='w-8 h-8 xs:w-12 xs:h-12 hover:scale-105' />
       </a>
     </div>
   );
