@@ -16,7 +16,7 @@ export const HeroSection = () => {
       {/* TODO: Remove waves on mobile/tablet devices? */}
       <div className='waves' />
       <div
-        className='flex flex-col lg:flex-row items-center justify-center h-[80%] 
+        className='flex mt-12 sm:mt-0 flex-col lg:flex-row items-center justify-center h-[80%] 
         gap-x-8 text-[21px]'
       >
         <div className='w-full lg:w-[50%]'>
@@ -57,8 +57,11 @@ export const HeroSection = () => {
             <SocialNetworks />
           </div>
         </div>
-        <div className='w-full lg:w-[50%] h-full text-left relative'>
-          <BlobWithImage className='absolute w-[685px] h-full -left-[85px] bottom-[15px]' />
+        <div className='w-full lg:w-[50%] h-full relative'>
+          <BlobWithImage
+            className='absolute w-[685px] h-[80%] sm:h-full left-[calc(50%-(685px/2))] 
+            lg:-left-[85px] sm:bottom-[15px]'
+          />
         </div>
       </div>
       <div className='mt-4 text-2xl font-bold text-center'>

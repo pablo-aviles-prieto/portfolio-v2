@@ -3,13 +3,17 @@ import { FlagContainer } from './styles/FlagContainer';
 import { LanguageContext } from '../store/LanguageContext';
 import { UkFlag, SpanishFlag } from './svgs';
 
+const MAX_VIEWPORT_WIDTH = 515;
+
 export const Header = () => {
   const { language, changeLanguage } = useContext(LanguageContext);
-  const [isWideEnough, setIsWideEnough] = useState(window.innerWidth > 500);
+  const [isWideEnough, setIsWideEnough] = useState(
+    window.innerWidth > MAX_VIEWPORT_WIDTH
+  );
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWideEnough(window.innerWidth > 500);
+      setIsWideEnough(window.innerWidth > MAX_VIEWPORT_WIDTH);
     };
     window.addEventListener('resize', handleResize);
 
@@ -25,7 +29,7 @@ export const Header = () => {
           Pablo Avilés
         </p>
       )}
-      <div className='flex text-xs sm:text-sm md:text-base lg:text-lg gap-x-3 sm:gap-x-5 md:gap-x-10'>
+      <div className='flex justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'>
         <a className='hover-effect' href='#professional-trajectory'>
           {language === 'es'
             ? 'Trayectoria profesional'
