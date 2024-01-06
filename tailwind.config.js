@@ -15,6 +15,9 @@ export default {
         'bright-color-1': '#e2e8f0',
         'bright-color-2': '#F7FAFE',
       },
+      screens: {
+        xs: '450px',
+      },
     },
   },
   plugins: [],
