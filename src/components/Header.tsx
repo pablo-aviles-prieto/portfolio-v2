@@ -1,17 +1,31 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { FlagContainer } from './styles/FlagContainer';
 import { LanguageContext } from '../store/LanguageContext';
 import { UkFlag, SpanishFlag } from './svgs';
+import gsap from 'gsap';
 
 const MAX_VIEWPORT_WIDTH = 515;
 
 export const Header = () => {
-  const { language, changeLanguage } = useContext(LanguageContext);
   const [isWideEnough, setIsWideEnough] = useState(
     window.innerWidth > MAX_VIEWPORT_WIDTH
   );
+  const nameRef = useRef<HTMLParagraphElement | null>(null);
+  const sectionsRef = useRef<HTMLDivElement | null>(null);
+  const { language, changeLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
+    gsap.from(nameRef.current, {
+      opacity: 0,
+      x: -400,
+      duration: 1.5,
+    });
+    gsap.from(sectionsRef.current, {
+      opacity: 0,
+      x: 400,
+      duration: 1.5,
+    });
+
     const handleResize = () => {
       setIsWideEnough(window.innerWidth > MAX_VIEWPORT_WIDTH);
     };
@@ -25,11 +39,17 @@ export const Header = () => {
   return (
     <div className='flex items-center px-2 pt-6 justify-evenly xs:justify-between xl:px-0'>
       {isWideEnough && (
-        <p className='text-lg font-bold sm:text-2xl md:text-3xl text-muted-shady-red-0'>
+        <p
+          ref={nameRef}
+          className='text-lg font-bold sm:text-2xl md:text-3xl text-muted-shady-red-0'
+        >
           Pablo Avilés
         </p>
       )}
-      <div className='flex items-center justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'>
+      <div
+        ref={sectionsRef}
+        className='flex items-center justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'
+      >
         <a className='hover-effect' href='#professional-trajectory'>
           {language === 'es'
             ? 'Trayectoria profesional'

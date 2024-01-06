@@ -1,19 +1,39 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { Header } from './Header';
 import { BlobWithImage } from './svgs';
 import { LanguageContext } from '../store/LanguageContext';
 import { SocialNetworks } from './SocialNetworks';
+import gsap from 'gsap';
 
-// TODO: Add some animations
 export const HeroSection = () => {
+  const textRef = useRef<HTMLParagraphElement | null>(null);
+  const keepScrollingRef = useRef<HTMLParagraphElement | null>(null);
+  const socialNetworkRef = useRef<HTMLDivElement | null>(null);
   const { language } = useContext(LanguageContext);
+
+  useEffect(() => {
+    gsap.from(textRef.current, {
+      opacity: 0,
+      y: -40,
+      duration: 1.2,
+    });
+    gsap.from(socialNetworkRef.current, {
+      opacity: 0,
+      y: 40,
+      duration: 1.2,
+    });
+    gsap.from(keepScrollingRef.current, {
+      opacity: 0,
+      y: 100,
+      duration: 2,
+    });
+  }, []);
 
   return (
     <div className='relative h-screen'>
       <div className='relative z-10'>
         <Header />
       </div>
-      {/* TODO: Remove waves on mobile/tablet devices? */}
       <div className='waves' />
       <div
         className='flex mt-12 sm:mt-0 flex-col lg:flex-row items-center justify-center h-[80%] 
@@ -21,6 +41,7 @@ export const HeroSection = () => {
       >
         <div className='w-full lg:w-[50%]'>
           <p
+            ref={textRef}
             className='pt-16 lg:pt-0 text-center lg:text-right text-sm xxs:text-base sm:text-xl 
             lg:text-[19px] xl:text-[22px]'
           >
@@ -53,7 +74,10 @@ export const HeroSection = () => {
               ? `Completamente centrado en el desarrollo web.`
               : `Now completely focused on web development.`}
           </p>
-          <div className='w-full lg:w-[435px] xl:w-[500px] ml-auto pt-2'>
+          <div
+            ref={socialNetworkRef}
+            className='w-full lg:w-[435px] xl:w-[500px] ml-auto pt-2'
+          >
             <SocialNetworks />
           </div>
         </div>
@@ -65,7 +89,10 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className='text-lg font-bold text-center sm:mt-4 sm:text-2xl'>
-        <p className='inline-block text-transparent bg-gradient-to-r from-muted-shady-red-1 via-muted-shady-red-0 to-muted-shady-red-1 bg-clip-text'>
+        <p
+          ref={keepScrollingRef}
+          className='inline-block text-transparent bg-gradient-to-r from-muted-shady-red-1 via-muted-shady-red-0 to-muted-shady-red-1 bg-clip-text'
+        >
           {language === 'es'
             ? `Sigue bajando para conocer más sobre mí`
             : `Keep scrolling to know more about me`}

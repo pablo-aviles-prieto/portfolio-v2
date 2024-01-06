@@ -17,7 +17,6 @@ import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
 import { SocialNetworks } from './components/SocialNetworks';
 
-// TODO: Style scrollbar
 function App() {
   const { language } = useContext(LanguageContext);
   const timelineTotalWidth =
@@ -131,9 +130,19 @@ function App() {
         </Controller>
         <div className='min-h-[555px]'>
           <ContactForm />
-          <div className='mt-4'>
-            <SocialNetworks />
-          </div>
+          <Controller>
+            <Scene duration={50} triggerHook={0.9}>
+              <Timeline
+                target={
+                  <div className='mt-4'>
+                    <SocialNetworks />
+                  </div>
+                }
+              >
+                <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} duration={1} />
+              </Timeline>
+            </Scene>
+          </Controller>
         </div>
       </div>
     </div>

@@ -10,7 +10,6 @@ type Params = {
   setFormErrors: (errors: FormErrors) => void;
 };
 
-// TODO: Use both languages
 export const isValidatedContactForm = ({ formData, setFormErrors }: Params) => {
   const errorMessages: Record<keyof typeof formData, string> = {
     name: 'Name is required',
