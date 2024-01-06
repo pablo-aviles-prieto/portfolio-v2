@@ -15,7 +15,7 @@ import { CardContainer } from './components/card/CardContainer';
 import { ContactForm } from './components/ContactForm';
 import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
-import { GithubIcon, LinkedinIcon } from './components/svgs';
+import { SocialNetworks } from './components/SocialNetworks';
 
 function App() {
   const { language } = useContext(LanguageContext);
@@ -25,7 +25,6 @@ function App() {
   const evenTimelineData = getEvenItemsFromArray(timelineData);
   const oddTimelineData = getOddItemsFromArray(timelineData);
 
-  // TODO: Add both languages
   return (
     <div className='bg-shady-dark-blue-1'>
       <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>
@@ -37,7 +36,6 @@ function App() {
                 duration={6000}
                 triggerHook={0.05}
                 pin={{ pushFollowers: false }}
-                // indicators={true}
                 classToggle='overflow-hidden'
               >
                 <Timeline
@@ -132,12 +130,8 @@ function App() {
         </Controller>
         <div className='min-h-[555px]'>
           <ContactForm />
-          <div className='flex items-center justify-center mt-2 gap-x-2 text-inherit'>
-            {/* TODO: Add opacity animation */}
-            {/* TODO: Set a grey filter and colors on hover */}
-            {/* TODO: Add link to my profiles */}
-            <LinkedinIcon className='w-12 h-12' />
-            <GithubIcon className='w-12 h-12' />
+          <div className='mt-4'>
+            <SocialNetworks />
           </div>
         </div>
       </div>
