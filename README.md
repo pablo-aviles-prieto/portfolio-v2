@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# 🌟 Personal Portfolio 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository of my personal portfolio. This portfolio showcases my skills and projects as a full-stack developer.
 
-Currently, two official plugins are available:
+## 📌 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My portfolio has been built using a modern tech stack and includes some cool animations to enhance the user experience. Here's a quick overview of the technologies and tools used:
 
-## Expanding the ESLint configuration
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast, next-generation frontend build tool.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **ScrollMagic and GSAP**: Used for creating stunning scroll-based animations and interactions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🌐 Live Demo
 
-- Configure the top-level `parserOptions` property like this:
+You can view the live version of my portfolio at [www.pabloaviles.es](https://www.pabloaviles.es).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## ⭐ Features
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Responsive design ensuring a seamless experience across various devices.
+- Interactive and engaging scroll animations using ScrollMagic and GSAP.
+- Built with best practices in mind, leveraging the power of Vite and TypeScript for a robust and maintainable codebase.
+
+Feel free to explore the code, and if you have any questions or suggestions, don't hesitate to reach out!
+
+---
+
+Pablo Avilés
