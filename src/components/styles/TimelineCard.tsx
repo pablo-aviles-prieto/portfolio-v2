@@ -28,7 +28,7 @@ export const TimelineCard = ({
   return (
     <div
       style={styleTyped}
-      className={`px-4 py-2 text-left border-2 rounded-md ${
+      className={`px-[16px] py-[8px] text-left border-2 rounded-md ${
         timelineBground[type]
       } border-muted-shady-red-0 ${
         timelinePosition === 'top'

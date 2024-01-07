@@ -63,11 +63,11 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
             type={item.type as keyof typeof timelineBground}
           >
             <p
-              className='text-[16px]'
+              className='text-[16px] leading-[24px]'
               dangerouslySetInnerHTML={{ __html: item.text[language] }}
             />
             {item.subtitle && (
-              <p className='mt-3 text-sm !text-[14px] italic font-medium text-muted-shady-red-0'>
+              <p className='mt-[12px] text-sm !text-[14px] italic font-medium text-muted-shady-red-0'>
                 {item.subtitle[language]}
               </p>
             )}
