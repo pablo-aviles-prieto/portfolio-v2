@@ -68,26 +68,30 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 310px;
+  height: 210px;
   transition: 500ms;
   z-index: 1;
-}
-
-@media (min-width: 800px) {
-  .waves {
-    height: 260px;
-  }
 }
 
 .waves::before,
 .waves::after {
   content: '';
   position: absolute;
-  width: 2800px;
-  height: 2800px;
-  top: -1280px;
+  width: 2700px;
+  height: 2700px;
+  top: -1580px;
   left: 50%;
   transform: translate(-50%, -25%);
+}
+
+@media (min-width: 1025px) {
+  .waves {
+    height: 480px;
+  }
+  .waves::before,
+  .waves::after {
+    top: -940px;
+  }
 }
 
 .waves::before {
