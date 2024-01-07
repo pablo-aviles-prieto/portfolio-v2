@@ -231,14 +231,5 @@ export const Cypress: React.FC<SVGProps<SVGSVGElement>> = (
         fill: 'url(#SVGID_00000100373257584267226060000002155254387837733269_)',
       }}
     />
-    <image
-      xlinkHref='../../../../../../../../Users/katiesculley/Downloads/Logo/Type=Mark, Variant=White + Color.png'
-      width={512}
-      height={512}
-      style={{
-        overflow: 'visible',
-      }}
-      transform='translate(-386.839 2385.227) scale(1.9513)'
-    />
   </svg>
 );
