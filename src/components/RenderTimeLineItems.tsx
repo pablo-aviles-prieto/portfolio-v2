@@ -35,10 +35,10 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
     };
     const yearTextSize =
       item.year.length <= 4
-        ? 'text-xl'
+        ? 'text-xl !text-[20px]'
         : item.year.includes('Present')
         ? 'text-[11px]'
-        : 'text-base';
+        : 'text-base !text-[16px]';
     const yearLineHeight =
       item.year.length <= 4
         ? '28px'
@@ -62,9 +62,12 @@ export const RenderTimelineItems = ({ data, isTopSide = true }: Props) => {
             timelinePosition={isTopSide ? 'top' : 'bottom'}
             type={item.type as keyof typeof timelineBground}
           >
-            <p dangerouslySetInnerHTML={{ __html: item.text[language] }} />
+            <p
+              className='text-[16px]'
+              dangerouslySetInnerHTML={{ __html: item.text[language] }}
+            />
             {item.subtitle && (
-              <p className='mt-3 text-sm italic font-medium text-muted-shady-red-0'>
+              <p className='mt-3 text-sm !text-[14px] italic font-medium text-muted-shady-red-0'>
                 {item.subtitle[language]}
               </p>
             )}
