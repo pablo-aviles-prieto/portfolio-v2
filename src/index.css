@@ -90,7 +90,7 @@ html {
   }
   .waves::before,
   .waves::after {
-    top: -940px;
+    top: -1050px;
   }
 }
 
