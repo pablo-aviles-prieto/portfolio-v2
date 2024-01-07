@@ -15,11 +15,13 @@ export const Header = () => {
   const { language, changeLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
-    gsap.from(nameRef.current, {
-      opacity: 0,
-      x: -400,
-      duration: 1.5,
-    });
+    if (nameRef.current) {
+      gsap.from(nameRef.current, {
+        opacity: 0,
+        x: -400,
+        duration: 1.5,
+      });
+    }
     gsap.from(sectionsRef.current, {
       opacity: 0,
       x: 400,
