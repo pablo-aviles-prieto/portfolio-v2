@@ -37,7 +37,7 @@ export const HeroSection = () => {
       <div className='waves' />
       <div
         className='flex mt-12 sm:mt-0 flex-col lg:flex-row items-center justify-center h-[80%] 
-        gap-x-8 text-[21px]'
+        gap-x-8 text-[21px] relative z-10'
       >
         <div className='w-full lg:w-[50%]'>
           <p
@@ -91,7 +91,7 @@ export const HeroSection = () => {
       <div className='text-lg font-bold text-center sm:mt-4 sm:text-2xl'>
         <p
           ref={keepScrollingRef}
-          className='inline-block text-transparent bg-gradient-to-r from-muted-shady-red-1 via-muted-shady-red-0 to-muted-shady-red-1 bg-clip-text'
+          className='relative z-10 inline-block text-transparent bg-gradient-to-r from-muted-shady-red-1 via-muted-shady-red-0 to-muted-shady-red-1 bg-clip-text'
         >
           {language === 'es'
             ? `Sigue bajando para conocer más sobre mí`
