@@ -1,7 +1,5 @@
 FROM node:18-alpine
 
-ARG VITE_FORMSPREE_ID
-
 RUN mkdir -p /home/app
 WORKDIR /home/app
 
