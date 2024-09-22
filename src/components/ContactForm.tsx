@@ -44,6 +44,7 @@ export const ContactForm = () => {
           : `Le contactaré lo antes posible 🤗`,
         { id: toastId }
       );
+      setToastId(null);
     } else if (submitState?.errors) {
       toast.error(
         language === 'en'
@@ -51,6 +52,7 @@ export const ContactForm = () => {
           : 'Hubo un error al enviar la información de contacto. Inténtelo más tarde 😓',
         { id: toastId }
       );
+      setToastId(null);
     }
   }, [submitState, toastId, language]);
 
