@@ -13,6 +13,8 @@ import {
   Tailwind,
   Socketio,
   Remix,
+  NextJS,
+  Zod,
 } from '../components/svgs/technologies';
 
 export const timelineData = [
@@ -135,17 +137,27 @@ export const TIMELINE_BORDER = 4;
 
 export const prevWorks: PrevWork[] = [
   {
+    title: 'Expense Tracker',
+    image: 'pinta2.webp',
+    descriptionEn: 'Manage your transactions and subscriptions with ease',
+    descriptionEs:
+      'Administra todas tus transacciones y subscripciones facilmente',
+    techs: ['nextjs', 'typescript', 'tailwind', 'zod', 'mongodb'],
+    github: 'https://github.com/pablo-aviles-prieto/expense-tracker',
+    website: 'https://www.expense-tracker.pabloaviles.es/',
+  },
+  {
     title: 'Pinta2',
     image: 'pinta2.webp',
     descriptionEn:
       'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
-    subDescriptionEs: 'Solamente disponible en español',
     descriptionEs:
       'Juega con tus amigos en este juego (de dibujar y adivinar) parecido al pinturillo',
+    subDescriptionEs: 'Solamente disponible en español',
     techs: ['react', 'typescript', 'tailwind', 'socketio', 'nodejs'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/pinta2-frontend',
-    github2: 'https://github.com/Pablo-Aviles-Prieto/pinta2-backend',
+    github: 'https://github.com/pablo-aviles-prieto/pinta2-frontend',
+    github2: 'https://github.com/pablo-aviles-prieto/pinta2-backend',
     website: 'https://www.pinta2.pabloaviles.es/',
   },
   {
@@ -160,39 +172,43 @@ export const prevWorks: PrevWork[] = [
     subDescriptionEs:
       'Actualmente sin desplegar, aunque el código es 100% funcional',
     techs: ['remix', 'typescript', 'tailwind', 'playwright', 'mongodb'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/remix-scrape-it',
+    github: 'https://github.com/pablo-aviles-prieto/remix-scrape-it',
+    website: 'https://www.scrapeit.pabloaviles.es/',
   },
   {
     title: 'Hotel Miranda dashboard',
     image: 'dashboard-miranda.webp',
     descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs:
       'Dashboard de control para gestionar todos los datos del Hotel Miranda',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux', 'cypress', 'nodejs', 'mongodb'],
     github:
-      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-frontend',
+      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-frontend',
     github2:
-      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-backend',
-    website: 'https://www.miranda-dashboard.pabloaviles.es/',
+      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-backend',
   },
   {
     title: 'Hotel Miranda website',
     image: 'miranda-public.webp',
     descriptionEn: `Public website of the 'Hotel Miranda'`,
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs: 'Página web pública del Hotel Miranda',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['php', 'mysql', 'javascript'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/Hotel-management-PHP',
-    website: 'https://hotelmiranda.000webhostapp.com/',
+    github: 'https://github.com/pablo-aviles-prieto/Hotel-management-PHP',
   },
   {
     title: 'Image finder',
     image: 'img-finder.webp',
     descriptionEn: 'App image finder using the unsplash API',
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs: 'Aplicación para buscar imágenes de unsplash',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux'],
     github:
-      'https://github.com/Pablo-Aviles-Prieto/app-image-finder-unsplash-React-TS',
-    website: 'https://www.images.pabloaviles.es/',
+      'https://github.com/pablo-aviles-prieto/app-image-finder-unsplash-React-TS',
   },
 ];
 
@@ -210,4 +226,6 @@ export const techs = {
   tailwind: Tailwind,
   socketio: Socketio,
   remix: Remix,
+  nextjs: NextJS,
+  zod: Zod,
 } as const;
