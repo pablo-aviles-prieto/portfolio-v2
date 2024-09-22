@@ -138,7 +138,7 @@ export const TIMELINE_BORDER = 4;
 export const prevWorks: PrevWork[] = [
   {
     title: 'Expense Tracker',
-    image: 'pinta2.webp',
+    image: 'expense-tracker.webp',
     descriptionEn: 'Manage your transactions and subscriptions with ease',
     descriptionEs:
       'Administra todas tus transacciones y subscripciones facilmente',
