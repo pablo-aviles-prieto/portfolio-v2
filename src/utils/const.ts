@@ -165,12 +165,8 @@ export const prevWorks: PrevWork[] = [
     image: 'scrape-it.webp',
     descriptionEn:
       'Web scrapper for the coolmod site, where you can subscribe via email to get the latest item pricing',
-    subDescriptionEn:
-      'Currently not deployed, even while the code is working 100%',
     descriptionEs:
       'Web scrapper para la página de coolmod, donde puedes subscribirte por email para recibir los últimos precios de un producto',
-    subDescriptionEs:
-      'Actualmente sin desplegar, aunque el código es 100% funcional',
     techs: ['remix', 'typescript', 'tailwind', 'playwright', 'mongodb'],
     github: 'https://github.com/pablo-aviles-prieto/remix-scrape-it',
     website: 'https://www.scrapeit.pabloaviles.es/',
