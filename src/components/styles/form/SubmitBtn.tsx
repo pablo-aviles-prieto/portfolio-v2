@@ -1,27 +1,18 @@
-type SubmitState = {
-  errors: unknown;
-  result: unknown;
-  submitting: boolean;
-  succeeded: boolean;
-};
-
 type Props = {
-  submitState: SubmitState;
+  isLoading: boolean;
   language: 'es' | 'en';
 };
 
-export const SubmitBtn = ({ submitState, language }: Props) => {
+export const SubmitBtn = ({ isLoading, language }: Props) => {
   return (
     <div className='text-center'>
       <button
         type='submit'
-        disabled={submitState.submitting}
+        disabled={isLoading}
         className={`relative items-center justify-center px-12 sm:px-16 py-3 overflow-hidden font-medium text-center transition-all 
-    ${
-      submitState.submitting ? 'bg-gray-400' : 'bg-white hover:bg-white group'
-    } rounded`}
+    ${isLoading ? 'bg-gray-400' : 'bg-white hover:bg-white group'} rounded`}
       >
-        {!submitState.submitting && (
+        {!isLoading && (
           <span
             className={`w-64 h-48 rounded rotate-[-40deg] bg-muted-shady-red-0 absolute bottom-0 left-0 
         -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 
@@ -32,12 +23,10 @@ export const SubmitBtn = ({ submitState, language }: Props) => {
           className={`relative w-full text-left transition-colors duration-300 ease-in-out 
       flex items-center
     ${
-      submitState.submitting
-        ? 'text-black'
-        : 'text-muted-shady-red-2 group-hover:text-white'
+      isLoading ? 'text-black' : 'text-muted-shady-red-2 group-hover:text-white'
     } `}
         >
-          {submitState.submitting && (
+          {isLoading && (
             <svg
               className='w-5 h-5 mr-3 -ml-1 text-black animate-spin'
               xmlns='http://www.w3.org/2000/svg'
@@ -59,7 +48,7 @@ export const SubmitBtn = ({ submitState, language }: Props) => {
               ></path>
             </svg>
           )}
-          {submitState.submitting
+          {isLoading
             ? language === 'es'
               ? 'Enviando...'
               : 'Sending...'
