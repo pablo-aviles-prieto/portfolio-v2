@@ -102,8 +102,8 @@ export const timelineData = [
   {
     year: '2023',
     text: {
-      en: '<span class="highlight">Frontend Developer</span> specialized in <span class="highlight">React, TypeScript and Tailwind CSS.</span> Creating dynamic web applications with a strong emphasis on design and user experience. Working with libraries like <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Conducting unit and e2e testing using <span class="emphasize">Cypress, Jest, and MirageJS.</span> Working under <span class="emphasize">Agile Scrum methodologies</span> with sprints and kanban',
-      es: '<span class="highlight">Desarrollador Frontend</span> especializado en <span class="highlight">React, TypeScript y Tailwind CSS.</span> Creando aplicaciones web dinámicas enfocadas en el diseño y la experiencia de usuario. Trabajando con librerías como <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Testing unitario y e2e utilizando <span class="emphasize">Cypress, Jest y MirageJS.</span> Trabajando bajo <span class="emphasize">metodologías Agile Scrum</span> con sprints y kanban',
+      en: '<span class="highlight">Frontend Developer</span> with expertise in <span class="highlight">React, TypeScript and Tailwind CSS.</span> building dynamic web apps focused on design and user experience. Worked with tools like <span class="emphasize">SWR, Zustand and Chart.js,</span> and conducted <span class="emphasize">unit/e2e testing</span> with <span class="emphasize">Cypress and Jest.</span> Followed Agile methodologies (Scrum, sprints, Kanban).',
+      es: '<span class="highlight">Desarrollador Frontend</span> con experiencia en <span class="highlight">React, TypeScript y Tailwind CSS.</span> creando aplicaciones web dinámicas enfocadas en diseño y experiencia de usuario. Utilización de herramientas como <span class="emphasize">SWR, Zustand y Chart.js,</span> y realización de <span class="emphasize">pruebas unitarias/e2e</span> con <span class="emphasize">Cypress y Jest.</span> Metodologías ágiles seguidas (Scrum, sprints, Kanban).',
     },
     subtitle: {
       en: 'Flat 101, remote (Zaragoza), Spain',
@@ -114,8 +114,8 @@ export const timelineData = [
   {
     year: '2023\n\r-\n\rPresent',
     text: {
-      en: '<span class="highlight">Currently working,</span> primarily using <span class="emphasize">React and Node.js</span>',
-      es: '<span class="highlight">Trabajando actualmente,</span> usando principalmente <span class="emphasize">React y Node.js</span>',
+      en: '<span class="highlight">Frontend Developer</span> working on a SaaS app (<span class="highlight">DataPocket</span>) and integrating with platforms like <span class="highlight">Canva and Adobe Express</span>. Mainly using <span class="emphasize">React, TypeScript, and Tailwind CSS.</span> Worked with frameworks like <span class="emphasize">Next.js and Remix</span>, and tools like <span class="emphasize">Zustand, Tanstack React Query, and Shadcn UI.</span> Some backend experience with <span class="emphasize">Next.js and Strapi (Node.js).</span>',
+      es: '<span class="highlight">Desarrollador Frontend</span> en una app SaaS (<span class="highlight">DataPocket</span>) integrando con <span class="highlight">Canva y Adobe Express</span>. Uso principal de <span class="emphasize">React, TypeScript y Tailwind CSS.</span> He trabajado con <span class="emphasize">Next.js, Remix</span>, y herramientas como <span class="emphasize">Zustand y Tanstack React Query.</span> Algo de experiencia en backend con <span class="emphasize">Next.js y Strapi (Node.js).</span>',
     },
     subtitle: {
       en: 'Ovixia, hybrid (A Coruña), Spain',

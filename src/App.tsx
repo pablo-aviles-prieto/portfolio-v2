@@ -17,6 +17,7 @@ import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
 import { SocialNetworks } from './components/SocialNetworks';
 
+// TODO: Add a button (at 10% of scroll???) to scroll back to the top
 function App() {
   const { language } = useContext(LanguageContext);
   const timelineTotalWidth =
