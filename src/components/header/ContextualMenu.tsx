@@ -18,15 +18,13 @@ export const ContextualMenu = ({
 
   return (
     <div
-      className={`absolute top-0 right-6 pt-7 transform transition-all duration-700 ease-in-out ${
+      className={`absolute -top-1 sm:top-0 right-6 pt-7 transform transition-all duration-700 ease-in-out ${
         showContextualMenuBlock ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
     >
-      {
-        <button className='flex justify-end w-full' onClick={toggleMenu}>
-          <HamburgerIcon className='size-8' />
-        </button>
-      }
+      <button className='flex justify-end w-full' onClick={toggleMenu}>
+        <HamburgerIcon className='size-5 sm:size-8' />
+      </button>
 
       <div
         className={`${
