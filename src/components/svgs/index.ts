@@ -7,3 +7,4 @@ export * from './Web';
 export * from './technologies';
 export * from './LinkedinIcon';
 export * from './GithubIcon';
+export * from './HamburgerIcon';

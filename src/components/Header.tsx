@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { FlagContainer } from './styles/FlagContainer';
 import { LanguageContext } from '../store/LanguageContext';
-import { UkFlag, SpanishFlag } from './svgs';
+import { UkFlag, SpanishFlag, HamburgerIcon } from './svgs';
 import gsap from 'gsap';
 
 const MAX_VIEWPORT_WIDTH = 515;
@@ -117,11 +117,13 @@ export const Header = () => {
       </div>
 
       <div
-        className={`absolute top-0 right-0 pt-8 transform transition-all duration-700 ease-in-out ${
+        className={`absolute top-0 right-6 pt-7 transform transition-all duration-700 ease-in-out ${
           showContextualMenu ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <button className='hamburger-menu'>HAMBURGER</button>
+        <button>
+          <HamburgerIcon className='size-8' />
+        </button>
       </div>
     </div>
   );
