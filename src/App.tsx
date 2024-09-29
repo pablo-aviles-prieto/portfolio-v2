@@ -16,6 +16,7 @@ import { ContactForm } from './components/ContactForm';
 import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
 import { SocialNetworks } from './components/SocialNetworks';
+import { Header } from './components/header/Header';
 
 function App() {
   const { language } = useContext(LanguageContext);
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className='bg-shady-dark-blue-1'>
       <div className='mx-auto overflow-hidden text-bright-color-1 max-w-7xl'>
+        <Header />
         <HeroSection />
         <Controller>
           <div>
@@ -42,7 +44,6 @@ function App() {
                   target={
                     <div style={{ width: `${timelineTotalWidth}px` }}>
                       <div
-                        id='professional-trajectory-top'
                         className='flex border-muted-shady-red-0 min-h-[332px] max-h-[332px]'
                         style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                       >

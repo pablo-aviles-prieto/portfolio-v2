@@ -17,6 +17,7 @@ html {
   position: relative;
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.3s;
 }
 
@@ -77,20 +78,20 @@ html {
 .waves::after {
   content: '';
   position: absolute;
-  width: 2700px;
-  height: 2700px;
-  top: -1580px;
+  width: 2900px;
+  height: 2900px;
+  top: -1500px;
   left: 50%;
   transform: translate(-50%, -25%);
 }
 
 @media (min-width: 1025px) {
   .waves {
-    height: 480px;
+    height: 880px;
   }
   .waves::before,
   .waves::after {
-    top: -1050px;
+    top: -790px;
   }
 }
 

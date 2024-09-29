@@ -1,3 +1,5 @@
+import { techs } from '../utils/const';
+
 export type PrevWork = {
   title: string;
   image: string;
@@ -5,7 +7,7 @@ export type PrevWork = {
   subDescriptionEn?: string;
   descriptionEs: string;
   subDescriptionEs?: string;
-  techs: string[];
+  techs: Array<keyof typeof techs>;
   github: string;
   github2?: string;
   website?: string;

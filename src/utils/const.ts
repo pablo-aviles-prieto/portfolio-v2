@@ -13,6 +13,8 @@ import {
   Tailwind,
   Socketio,
   Remix,
+  NextJS,
+  Zod,
 } from '../components/svgs/technologies';
 
 export const timelineData = [
@@ -100,8 +102,8 @@ export const timelineData = [
   {
     year: '2023',
     text: {
-      en: '<span class="highlight">Frontend Developer</span> specialized in <span class="highlight">React, TypeScript and Tailwind CSS.</span> Creating dynamic web applications with a strong emphasis on design and user experience. Working with libraries like <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Conducting unit and e2e testing using <span class="emphasize">Cypress, Jest, and MirageJS.</span> Working under <span class="emphasize">Agile Scrum methodologies</span> with sprints and kanban',
-      es: '<span class="highlight">Desarrollador Frontend</span> especializado en <span class="highlight">React, TypeScript y Tailwind CSS.</span> Creando aplicaciones web dinámicas enfocadas en el diseño y la experiencia de usuario. Trabajando con librerías como <span class="emphasize">SWR, Zustand, Chart.js, i18n, date-fns, dnd-kit, Formik/React Hook Forms.</span> Testing unitario y e2e utilizando <span class="emphasize">Cypress, Jest y MirageJS.</span> Trabajando bajo <span class="emphasize">metodologías Agile Scrum</span> con sprints y kanban',
+      en: '<span class="highlight">Frontend Developer</span> with expertise in <span class="highlight">React, TypeScript and Tailwind CSS.</span> building dynamic web apps focused on design and user experience. Worked with tools like <span class="emphasize">SWR, Zustand and Chart.js,</span> and conducted <span class="emphasize">unit/e2e testing</span> with <span class="emphasize">Cypress and Jest.</span> Followed Agile methodologies (Scrum, sprints, Kanban).',
+      es: '<span class="highlight">Desarrollador Frontend</span> con experiencia en <span class="highlight">React, TypeScript y Tailwind CSS.</span> creando aplicaciones web dinámicas enfocadas en diseño y experiencia de usuario. Utilización de herramientas como <span class="emphasize">SWR, Zustand y Chart.js,</span> y realización de <span class="emphasize">pruebas unitarias/e2e</span> con <span class="emphasize">Cypress y Jest.</span> Metodologías ágiles seguidas (Scrum, sprints, Kanban).',
     },
     subtitle: {
       en: 'Flat 101, remote (Zaragoza), Spain',
@@ -112,8 +114,8 @@ export const timelineData = [
   {
     year: '2023\n\r-\n\rPresent',
     text: {
-      en: '<span class="highlight">Currently working,</span> primarily using <span class="emphasize">React and Node.js</span>',
-      es: '<span class="highlight">Trabajando actualmente,</span> usando principalmente <span class="emphasize">React y Node.js</span>',
+      en: '<span class="highlight">Frontend Developer</span> working on a SaaS app (<span class="highlight">DataPocket</span>) and integrating with platforms like <span class="highlight">Canva and Adobe Express</span>. Mainly using <span class="emphasize">React, TypeScript, and Tailwind CSS.</span> Worked with frameworks like <span class="emphasize">Next.js and Remix</span>, and tools like <span class="emphasize">Zustand, Tanstack React Query, and Shadcn UI.</span> Some backend experience with <span class="emphasize">Next.js and Strapi (Node.js).</span>',
+      es: '<span class="highlight">Desarrollador Frontend</span> en una app SaaS (<span class="highlight">DataPocket</span>) integrando con <span class="highlight">Canva y Adobe Express</span>. Uso principal de <span class="emphasize">React, TypeScript y Tailwind CSS.</span> He trabajado con <span class="emphasize">Next.js, Remix</span>, y herramientas como <span class="emphasize">Zustand y Tanstack React Query.</span> Algo de experiencia en backend con <span class="emphasize">Next.js y Strapi (Node.js).</span>',
     },
     subtitle: {
       en: 'Ovixia, hybrid (A Coruña), Spain',
@@ -135,17 +137,27 @@ export const TIMELINE_BORDER = 4;
 
 export const prevWorks: PrevWork[] = [
   {
+    title: 'Expense Tracker',
+    image: 'expense-tracker.webp',
+    descriptionEn: 'Manage your transactions and subscriptions with ease',
+    descriptionEs:
+      'Administra todas tus transacciones y subscripciones facilmente',
+    techs: ['nextjs', 'typescript', 'tailwind', 'zod', 'mongodb'],
+    github: 'https://github.com/pablo-aviles-prieto/expense-tracker',
+    website: 'https://www.expense-tracker.pabloaviles.es/',
+  },
+  {
     title: 'Pinta2',
     image: 'pinta2.webp',
     descriptionEn:
       'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
-    subDescriptionEs: 'Solamente disponible en español',
     descriptionEs:
       'Juega con tus amigos en este juego (de dibujar y adivinar) parecido al pinturillo',
+    subDescriptionEs: 'Solamente disponible en español',
     techs: ['react', 'typescript', 'tailwind', 'socketio', 'nodejs'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/pinta2-frontend',
-    github2: 'https://github.com/Pablo-Aviles-Prieto/pinta2-backend',
+    github: 'https://github.com/pablo-aviles-prieto/pinta2-frontend',
+    github2: 'https://github.com/pablo-aviles-prieto/pinta2-backend',
     website: 'https://www.pinta2.pabloaviles.es/',
   },
   {
@@ -153,46 +165,46 @@ export const prevWorks: PrevWork[] = [
     image: 'scrape-it.webp',
     descriptionEn:
       'Web scrapper for the coolmod site, where you can subscribe via email to get the latest item pricing',
-    subDescriptionEn:
-      'Currently not deployed, even while the code is working 100%',
     descriptionEs:
       'Web scrapper para la página de coolmod, donde puedes subscribirte por email para recibir los últimos precios de un producto',
-    subDescriptionEs:
-      'Actualmente sin desplegar, aunque el código es 100% funcional',
     techs: ['remix', 'typescript', 'tailwind', 'playwright', 'mongodb'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/remix-scrape-it',
+    github: 'https://github.com/pablo-aviles-prieto/remix-scrape-it',
+    website: 'https://www.scrapeit.pabloaviles.es/',
   },
   {
     title: 'Hotel Miranda dashboard',
     image: 'dashboard-miranda.webp',
     descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs:
       'Dashboard de control para gestionar todos los datos del Hotel Miranda',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux', 'cypress', 'nodejs', 'mongodb'],
     github:
-      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-frontend',
+      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-frontend',
     github2:
-      'https://github.com/Pablo-Aviles-Prieto/Hotel-management-dashboard-backend',
-    website: 'https://www.miranda-dashboard.pabloaviles.es/',
+      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-backend',
   },
   {
     title: 'Hotel Miranda website',
     image: 'miranda-public.webp',
     descriptionEn: `Public website of the 'Hotel Miranda'`,
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs: 'Página web pública del Hotel Miranda',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['php', 'mysql', 'javascript'],
-    github: 'https://github.com/Pablo-Aviles-Prieto/Hotel-management-PHP',
-    website: 'https://hotelmiranda.000webhostapp.com/',
+    github: 'https://github.com/pablo-aviles-prieto/Hotel-management-PHP',
   },
   {
     title: 'Image finder',
     image: 'img-finder.webp',
     descriptionEn: 'App image finder using the unsplash API',
+    subDescriptionEn: 'Currently not deployed',
     descriptionEs: 'Aplicación para buscar imágenes de unsplash',
+    subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux'],
     github:
-      'https://github.com/Pablo-Aviles-Prieto/app-image-finder-unsplash-React-TS',
-    website: 'https://www.images.pabloaviles.es/',
+      'https://github.com/pablo-aviles-prieto/app-image-finder-unsplash-React-TS',
   },
 ];
 
@@ -210,4 +222,6 @@ export const techs = {
   tailwind: Tailwind,
   socketio: Socketio,
   remix: Remix,
+  nextjs: NextJS,
+  zod: Zod,
 } as const;

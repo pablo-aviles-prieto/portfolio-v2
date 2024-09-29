@@ -11,3 +11,5 @@ export * from './JavaScript';
 export * from './Tailwind';
 export * from './Socketio';
 export * from './Remix';
+export * from './NextJS';
+export * from './Zod';

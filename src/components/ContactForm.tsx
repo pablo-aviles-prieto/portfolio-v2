@@ -1,11 +1,11 @@
-import { type FormEvent, useContext, useEffect, useState } from 'react';
+import { type FormEvent, useContext, useState } from 'react';
 import { Input, Textarea, Select, SubmitBtn } from './styles/form';
 import { isValidatedContactForm } from '../utils/isValidatedContactForm';
-import { useForm } from '@formspree/react';
 import toast from 'react-hot-toast';
 import { LanguageContext } from '../store/LanguageContext';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Timeline, Tween } from 'react-gsap';
+import emailjs from '@emailjs/browser';
 
 export const CONTACT_FORM_INIT_VALUES = {
   name: '',
@@ -21,8 +21,11 @@ export const CONTACT_FORM_ERR_VALUES = {
   message: '',
 };
 
-const { VITE_FORMSPREE_ID } = import.meta.env;
-const fromSpreeId = VITE_FORMSPREE_ID || '';
+const { VITE_MAIL_SERVICE_ID, VITE_MAIL_TEMPLATE_ID, VITE_MAIL_PUBLICK_KEY } =
+  import.meta.env;
+const mailServiceId = VITE_MAIL_SERVICE_ID || '';
+const mailTemplateId = VITE_MAIL_TEMPLATE_ID || '';
+const mailPublicKey = VITE_MAIL_PUBLICK_KEY || '';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState<typeof CONTACT_FORM_INIT_VALUES>(
@@ -31,28 +34,8 @@ export const ContactForm = () => {
   const [formErrors, setFormErrors] = useState<typeof CONTACT_FORM_INIT_VALUES>(
     CONTACT_FORM_INIT_VALUES
   );
-  const [toastId, setToastId] = useState<string | null>(null);
-  const [submitState, handleSubmitPromise] = useForm(fromSpreeId);
+  const [isLoading, setIsLoading] = useState(false);
   const { language } = useContext(LanguageContext);
-
-  useEffect(() => {
-    if (!toastId) return;
-    if (submitState.succeeded) {
-      toast.success(
-        language === 'en'
-          ? `I'll be in touch as soon as possible 🤗`
-          : `Le contactaré lo antes posible 🤗`,
-        { id: toastId }
-      );
-    } else if (submitState?.errors) {
-      toast.error(
-        language === 'en'
-          ? 'There was an error sending the contact info. Try again later 😓'
-          : 'Hubo un error al enviar la información de contacto. Inténtelo más tarde 😓',
-        { id: toastId }
-      );
-    }
-  }, [submitState, toastId, language]);
 
   const handleInputChange = ({
     value,
@@ -66,10 +49,10 @@ export const ContactForm = () => {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     const toastId = toast.loading(
       language === 'en' ? 'Sending info...' : 'Enviando info...'
     );
-    setToastId(toastId);
 
     const isValidated = isValidatedContactForm({ formData, setFormErrors });
     if (!isValidated) {
@@ -79,11 +62,46 @@ export const ContactForm = () => {
           : 'Rellena todos los campos 🥺',
         { id: toastId }
       );
+      setIsLoading(false);
       return;
     }
 
-    await handleSubmitPromise(e);
-    setFormData(CONTACT_FORM_INIT_VALUES);
+    emailjs
+      .send(mailServiceId, mailTemplateId, formData, {
+        publicKey: mailPublicKey,
+      })
+      .then(
+        () => {
+          toast.success(
+            language === 'en'
+              ? `I'll be in touch as soon as possible 🤗`
+              : `Le contactaré lo antes posible 🤗`,
+            { id: toastId }
+          );
+        },
+        (error) => {
+          console.log('Error sending the mail...', error.text);
+          toast.error(
+            language === 'en'
+              ? 'There was an error sending the contact info. Try again later 😓'
+              : 'Hubo un error al enviar la información de contacto. Inténtelo más tarde 😓',
+            { id: toastId }
+          );
+        }
+      )
+      .catch((error) => {
+        console.log('Error sending the mail...', error.text);
+        toast.error(
+          language === 'en'
+            ? 'There was an error sending the contact info. Try again later 😓'
+            : 'Hubo un error al enviar la información de contacto. Inténtelo más tarde 😓',
+          { id: toastId }
+        );
+      })
+      .finally(() => {
+        setFormData(CONTACT_FORM_INIT_VALUES);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -210,7 +228,7 @@ export const ContactForm = () => {
           <Timeline
             target={
               <div>
-                <SubmitBtn language={language} submitState={submitState} />
+                <SubmitBtn language={language} isLoading={isLoading} />
               </div>
             }
           >
