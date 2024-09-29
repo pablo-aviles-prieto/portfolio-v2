@@ -10,7 +10,7 @@ interface NavOptionsProps {
 export const NavOptions = ({ showGoBackTop = false }: NavOptionsProps) => {
   const { language, changeLanguage } = useContext(LanguageContext);
 
-  const scrollToTop = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const scrollToTop = (event: React.MouseEvent<HTMLParagraphElement>) => {
     event.preventDefault(); // Prevent default anchor behavior
     window.scrollTo({
       top: 0,
@@ -22,9 +22,9 @@ export const NavOptions = ({ showGoBackTop = false }: NavOptionsProps) => {
     <>
       {showGoBackTop && (
         <li>
-          <button className='hover-effect' onClick={scrollToTop}>
+          <span className='cursor-pointer hover-effect' onClick={scrollToTop}>
             {language === 'es' ? 'Volver al inicio' : 'Go back to top'}
-          </button>
+          </span>
         </li>
       )}
       <li>

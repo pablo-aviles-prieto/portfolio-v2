@@ -17,6 +17,7 @@ html {
   position: relative;
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.3s;
 }
 
