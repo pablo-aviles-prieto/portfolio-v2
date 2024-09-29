@@ -44,7 +44,6 @@ function App() {
                   target={
                     <div style={{ width: `${timelineTotalWidth}px` }}>
                       <div
-                        id='professional-trajectory-top'
                         className='flex border-muted-shady-red-0 min-h-[332px] max-h-[332px]'
                         style={{ borderBottomWidth: `${TIMELINE_BORDER}px` }}
                       >

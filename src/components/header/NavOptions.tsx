@@ -10,25 +10,36 @@ interface NavOptionsProps {
 export const NavOptions = ({ showGoBackTop = false }: NavOptionsProps) => {
   const { language, changeLanguage } = useContext(LanguageContext);
 
-  const scrollToTop = (event: React.MouseEvent<HTMLParagraphElement>) => {
-    event.preventDefault(); // Prevent default anchor behavior
+  const scrollToSection = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    pxToReach: number,
+    anchor: string
+  ) => {
+    event.preventDefault();
     window.scrollTo({
-      top: 0,
+      top: pxToReach,
       behavior: 'smooth',
     });
+    window.history.pushState(null, '', anchor);
   };
 
   return (
     <>
       {showGoBackTop && (
         <li>
-          <span className='cursor-pointer hover-effect' onClick={scrollToTop}>
+          <a
+            className='cursor-pointer hover-effect'
+            onClick={(e) => scrollToSection(e, 0, '#')}
+          >
             {language === 'es' ? 'Volver al inicio' : 'Go back to top'}
-          </span>
+          </a>
         </li>
       )}
       <li>
-        <a className='hover-effect' href='#professional-trajectory'>
+        <a
+          className='cursor-pointer hover-effect'
+          onClick={(e) => scrollToSection(e, 1500, '#professional-trajectory')}
+        >
           {language === 'es'
             ? 'Trayectoria profesional'
             : 'Professional trajectory'}

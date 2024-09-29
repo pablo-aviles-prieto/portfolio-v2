@@ -29,7 +29,7 @@ export const ContextualMenu = ({
       <div
         className={`${
           showContextualMenuContent
-            ? 'w-36 sm:w-44 h-[10.4rem] border'
+            ? 'w-36 sm:w-44 h-[9.1rem] sm:h-[10.4rem] border'
             : 'w-0 h-0 border-0'
         } overflow-hidden mt-1 transform transition-all bg-shady-dark-blue-1 duration-500 rounded-md shadow-md border-muted-shady-red-0`}
       >
