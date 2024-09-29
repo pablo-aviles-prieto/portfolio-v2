@@ -1,5 +1,4 @@
 import { useContext, useEffect, useRef } from 'react';
-import { Header } from './Header';
 import { BlobWithImage } from './svgs';
 import { LanguageContext } from '../store/LanguageContext';
 import { SocialNetworks } from './SocialNetworks';
@@ -31,12 +30,9 @@ export const HeroSection = () => {
 
   return (
     <div className='relative h-screen'>
-      <div className='relative z-10'>
-        <Header />
-      </div>
       <div className='waves' />
       <div
-        className='flex mt-12 sm:mt-0 flex-col lg:flex-row items-center justify-center h-[80%] 
+        className='flex mt-12 sm:mt-16 flex-col lg:flex-row items-center justify-center h-[80%] 
         gap-x-8 text-[21px] relative z-10'
       >
         <div className='w-full lg:w-[50%]'>
