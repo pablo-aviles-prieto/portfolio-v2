@@ -80,7 +80,7 @@ html {
   position: absolute;
   width: 2900px;
   height: 2900px;
-  top: -1460px;
+  top: -1500px;
   left: 50%;
   transform: translate(-50%, -25%);
 }
@@ -91,7 +91,7 @@ html {
   }
   .waves::before,
   .waves::after {
-    top: -760px;
+    top: -790px;
   }
 }
 
