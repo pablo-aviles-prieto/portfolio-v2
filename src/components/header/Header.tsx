@@ -1,8 +1,7 @@
-import { useContext, useEffect, useRef, useState } from 'react';
-import { FlagContainer } from './styles/FlagContainer';
-import { LanguageContext } from '../store/LanguageContext';
-import { UkFlag, SpanishFlag, HamburgerIcon } from './svgs';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { ContextualMenu } from './ContextualMenu';
+import { NavOptions } from './NavOptions';
 
 const MAX_VIEWPORT_WIDTH = 515;
 
@@ -10,11 +9,12 @@ export const Header = () => {
   const [isWideEnough, setIsWideEnough] = useState(
     window.innerWidth > MAX_VIEWPORT_WIDTH
   );
-  const [showContextualMenu, setShowContextualMenu] = useState(false);
+  const [showContextualMenuBlock, setShowContextualMenuBlock] = useState(false);
+  const [showContextualMenuContent, setShowContextualMenuContent] =
+    useState(false);
   const nameRef = useRef<HTMLParagraphElement | null>(null);
-  const sectionsRef = useRef<HTMLDivElement | null>(null);
+  const sectionsRef = useRef<HTMLUListElement | null>(null);
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const { language, changeLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
     if (nameRef.current) {
@@ -45,9 +45,7 @@ export const Header = () => {
           scaleX: 0,
           duration: 0.5,
           ease: 'power2.out',
-          onStart: () => {
-            setShowContextualMenu(true);
-          },
+          onStart: () => setShowContextualMenuBlock(true),
         });
       } else if (scrollY <= 100 && headerRef.current) {
         gsap.to(headerRef.current, {
@@ -57,7 +55,8 @@ export const Header = () => {
           duration: 0.5,
           ease: 'power2.out',
           onStart: () => {
-            setShowContextualMenu(false);
+            setShowContextualMenuBlock(false);
+            setShowContextualMenuContent(false);
           },
         });
       }
@@ -84,47 +83,19 @@ export const Header = () => {
             Pablo Avilés
           </p>
         )}
-        <div
+        <ul
           ref={sectionsRef}
           className='flex items-center justify-around w-full text-xs xs:justify-normal xs:w-auto sm:text-sm md:text-base lg:text-lg gap-x-1 sm:gap-x-5 md:gap-x-10'
         >
-          <a className='hover-effect' href='#professional-trajectory'>
-            {language === 'es'
-              ? 'Trayectoria profesional'
-              : 'Professional trajectory'}
-          </a>
-          <a className='hover-effect' href='#personal-projects'>
-            {language === 'es' ? 'Proyectos personales' : 'Personal projects'}
-          </a>
-          <a className='hover-effect' href='#contact-me'>
-            {language === 'es' ? 'Contáctame' : 'Contact me'}
-          </a>
-          <div className='flex items-center gap-2 mt-1'>
-            <FlagContainer
-              onClick={() => changeLanguage('es')}
-              grayscale={language !== 'es'}
-            >
-              <SpanishFlag className='w-[16px] sm:w-[20px] h-[16px] sm:h-[20px]' />
-            </FlagContainer>
-            <FlagContainer
-              onClick={() => changeLanguage('en')}
-              grayscale={language !== 'en'}
-            >
-              <UkFlag className='w-[16px] sm:w-[20px] h-[16px] sm:h-[20px]' />
-            </FlagContainer>
-          </div>
-        </div>
+          <NavOptions />
+        </ul>
       </div>
 
-      <div
-        className={`absolute top-0 right-6 pt-7 transform transition-all duration-700 ease-in-out ${
-          showContextualMenu ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <button>
-          <HamburgerIcon className='size-8' />
-        </button>
-      </div>
+      <ContextualMenu
+        showContextualMenuBlock={showContextualMenuBlock}
+        showContextualMenuContent={showContextualMenuContent}
+        setShowContextualMenuContent={setShowContextualMenuContent}
+      />
     </div>
   );
 };

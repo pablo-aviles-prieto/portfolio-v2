@@ -16,9 +16,8 @@ import { ContactForm } from './components/ContactForm';
 import { useContext } from 'react';
 import { LanguageContext } from './store/LanguageContext';
 import { SocialNetworks } from './components/SocialNetworks';
-import { Header } from './components/Header';
+import { Header } from './components/header/Header';
 
-// TODO: Add a button (at 10% of scroll???) to scroll back to the top
 function App() {
   const { language } = useContext(LanguageContext);
   const timelineTotalWidth =
