@@ -140,17 +140,15 @@ export const prevWorks: PrevWork[] = [
     title: 'Expense Tracker',
     image: 'expense-tracker.webp',
     descriptionEn: 'Manage your transactions and subscriptions with ease',
-    descriptionEs:
-      'Administra todas tus transacciones y subscripciones facilmente',
+    descriptionEs: 'Administra todas tus transacciones y subscripciones facilmente',
     techs: ['nextjs', 'typescript', 'tailwind', 'zod', 'mongodb'],
     github: 'https://github.com/pablo-aviles-prieto/expense-tracker',
-    website: 'https://www.expense-tracker.pabloaviles.es/',
+    website: 'https://www.expense-tracker.pabloaviles.dev/',
   },
   {
     title: 'Pinta2',
     image: 'pinta2.webp',
-    descriptionEn:
-      'Play with your friends in this skribbl (draw and guess) game alike',
+    descriptionEn: 'Play with your friends in this skribbl (draw and guess) game alike',
     subDescriptionEn: 'Only available in spanish at the moment',
     descriptionEs:
       'Juega con tus amigos en este juego (de dibujar y adivinar) parecido al pinturillo',
@@ -158,7 +156,7 @@ export const prevWorks: PrevWork[] = [
     techs: ['react', 'typescript', 'tailwind', 'socketio', 'nodejs'],
     github: 'https://github.com/pablo-aviles-prieto/pinta2-frontend',
     github2: 'https://github.com/pablo-aviles-prieto/pinta2-backend',
-    website: 'https://www.pinta2.pabloaviles.es/',
+    website: 'https://www.pinta2.pabloaviles.dev/',
   },
   {
     title: 'Scrape it!',
@@ -169,21 +167,18 @@ export const prevWorks: PrevWork[] = [
       'Web scrapper para la página de coolmod, donde puedes subscribirte por email para recibir los últimos precios de un producto',
     techs: ['remix', 'typescript', 'tailwind', 'playwright', 'mongodb'],
     github: 'https://github.com/pablo-aviles-prieto/remix-scrape-it',
-    website: 'https://www.scrapeit.pabloaviles.es/',
+    website: 'https://www.scrapeit.pabloaviles.dev/',
   },
   {
     title: 'Hotel Miranda dashboard',
     image: 'dashboard-miranda.webp',
     descriptionEn: `Dashboard to control all the data of the 'Hotel Miranda'`,
     subDescriptionEn: 'Currently not deployed',
-    descriptionEs:
-      'Dashboard de control para gestionar todos los datos del Hotel Miranda',
+    descriptionEs: 'Dashboard de control para gestionar todos los datos del Hotel Miranda',
     subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux', 'cypress', 'nodejs', 'mongodb'],
-    github:
-      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-frontend',
-    github2:
-      'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-backend',
+    github: 'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-frontend',
+    github2: 'https://github.com/pablo-aviles-prieto/Hotel-management-dashboard-backend',
   },
   {
     title: 'Hotel Miranda website',
@@ -203,8 +198,7 @@ export const prevWorks: PrevWork[] = [
     descriptionEs: 'Aplicación para buscar imágenes de unsplash',
     subDescriptionEs: 'Actualmente sin desplegar',
     techs: ['react', 'typescript', 'redux'],
-    github:
-      'https://github.com/pablo-aviles-prieto/app-image-finder-unsplash-React-TS',
+    github: 'https://github.com/pablo-aviles-prieto/app-image-finder-unsplash-React-TS',
   },
 ];
 

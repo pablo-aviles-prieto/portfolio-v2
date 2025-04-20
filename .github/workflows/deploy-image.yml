@@ -53,4 +53,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.bump_version.outputs.next_version }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: VITE_FORMSPREE_ID=${{ secrets.VITE_FORMSPREE_ID }}
+          build-args: |
+            VITE_MAIL_SERVICE_ID=${{ secrets.VITE_MAIL_SERVICE_ID }}
+            VITE_MAIL_TEMPLATE_ID=${{ secrets.VITE_MAIL_TEMPLATE_ID }}
+            VITE_MAIL_PUBLICK_KEY=${{ secrets.VITE_MAIL_PUBLICK_KEY }}
