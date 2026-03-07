@@ -52,7 +52,7 @@ export const timelineData = [
     type: 'it',
   },
   {
-    year: '2016\n\r-\n\r2019',
+    year: '2016\n\r-\n\r2018',
     text: {
       en: '<span class="highlight">Professional esports player</span> in the game <span class="emphasize">Counter-Strike: Global Offensive (CS:GO)</span>, for Baskonia Atlantis, Team Heretics, and Arctic Gaming',
       es: '<span class="highlight">Jugador profesional de esports</span> en el juego <span class="emphasize">Counter-Strike: Global offensive (CS:GO)</span>, para Baskonia Atlantis, Team Heretics y Arctic Gaming',
@@ -64,7 +64,7 @@ export const timelineData = [
     type: 'gaming',
   },
   {
-    year: '2019\n\r-\n\r2022',
+    year: '2018\n\r-\n\r2021',
     text: {
       en: 'Remote <span class="highlight">technical support</span> orientated to <span class="highlight">networking and systems</span> to companies in two <span class="emphasize">Internet Service Providers</span> (Mundo-r and Telecable)',
       es: '<span class="highlight">Soporte técnico de sistemas y telecomunicaciones</span> en remoto para grandes cuentas de los clientes Mundo-R y Telecable (<span class="emphasize">proveedores de servicios de internet</span>)',
@@ -76,7 +76,7 @@ export const timelineData = [
     type: 'it',
   },
   {
-    year: '2022',
+    year: '2021',
     text: {
       en: 'I have <span class="highlight">studied</span> and obtained certifications in <span class="highlight">frontend and backend development</span>, with a focus on React and JavaScript, through courses on <span class="emphasize">Udemy and freeCodeCamp</span>',
       es: '<span class="highlight">Estudié</span> y obtuve certificaciones en <span class="highlight">desarrollo frontend y backend</span>, enfocándome en React y JavaScript, a través de cursos en <span class="emphasize">Udemy y freeCodeCamp</span>',
@@ -88,10 +88,10 @@ export const timelineData = [
     type: 'dev',
   },
   {
-    year: '2022\n\r-\n\r2023',
+    year: '2021\n\r-\n\r2022',
     text: {
-      en: '<span class="highlight">Developing</span> in both the <span class="emphasize">backend and frontend</span>, working with:\n\r<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest and Cypress\n\r<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest and SuperTest',
-      es: '<span class="highlight">Desarrollando</span> tanto en el <span class="emphasize">backend</span> como en el <span class="emphasize">frontend</span>, trabajando con:\n\r<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n\r<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
+      en: '<span class="highlight">Developing</span> in both the <span class="emphasize">backend and frontend</span>, working with:\n<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest and Cypress\n<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest and SuperTest',
+      es: '<span class="highlight">Desarrollando</span> tanto en el <span class="emphasize">backend</span> como en el <span class="emphasize">frontend</span>, trabajando con:\n<span class="highlight">Frontend:</span> ReactJS, TypeScript, JavaScript, Styled-Componentes, Jest y Cypress\n<span class="highlight">Backend:</span> NodeJS, ExrpressJS, TypeScript, JavaScript, MongoDB, JWT, Jest y SuperTest',
     },
     subtitle: {
       en: 'OXYGEN, remote (Madrid), Spain',
@@ -100,7 +100,7 @@ export const timelineData = [
     type: 'dev',
   },
   {
-    year: '2023',
+    year: '2022\n\r-\n\r2023',
     text: {
       en: '<span class="highlight">Frontend Developer</span> with expertise in <span class="highlight">React, TypeScript and Tailwind CSS.</span> building dynamic web apps focused on design and user experience. Worked with tools like <span class="emphasize">SWR, Zustand and Chart.js,</span> and conducted <span class="emphasize">unit/e2e testing</span> with <span class="emphasize">Cypress and Jest.</span> Followed Agile methodologies (Scrum, sprints, Kanban).',
       es: '<span class="highlight">Desarrollador Frontend</span> con experiencia en <span class="highlight">React, TypeScript y Tailwind CSS.</span> creando aplicaciones web dinámicas enfocadas en diseño y experiencia de usuario. Utilización de herramientas como <span class="emphasize">SWR, Zustand y Chart.js,</span> y realización de <span class="emphasize">pruebas unitarias/e2e</span> con <span class="emphasize">Cypress y Jest.</span> Metodologías ágiles seguidas (Scrum, sprints, Kanban).',
@@ -112,7 +112,7 @@ export const timelineData = [
     type: 'dev',
   },
   {
-    year: '2023\n\r-\n\rPresent',
+    year: '2023\n\r-\n\r2025',
     text: {
       en: '<span class="highlight">Frontend Developer</span> working on a SaaS app (<span class="highlight">DataPocket</span>) and integrating with platforms like <span class="highlight">Canva and Adobe Express</span>. Mainly using <span class="emphasize">React, TypeScript, and Tailwind CSS.</span> Worked with frameworks like <span class="emphasize">Next.js and Remix</span>, and tools like <span class="emphasize">Zustand, Tanstack React Query, and Shadcn UI.</span> Some backend experience with <span class="emphasize">Next.js and Strapi (Node.js).</span>',
       es: '<span class="highlight">Desarrollador Frontend</span> en una app SaaS (<span class="highlight">DataPocket</span>) integrando con <span class="highlight">Canva y Adobe Express</span>. Uso principal de <span class="emphasize">React, TypeScript y Tailwind CSS.</span> He trabajado con <span class="emphasize">Next.js, Remix</span>, y herramientas como <span class="emphasize">Zustand y Tanstack React Query.</span> Algo de experiencia en backend con <span class="emphasize">Next.js y Strapi (Node.js).</span>',
@@ -120,6 +120,18 @@ export const timelineData = [
     subtitle: {
       en: 'Ovixia, hybrid (A Coruña), Spain',
       es: 'Ovixia, híbrido (A Coruña), España',
+    },
+    type: 'dev',
+  },
+  {
+    year: '2025\n\r-\n\rPresent',
+    text: {
+      en: '<span class="highlight">Senior Frontend Engineer</span> building custom logistic software for clients, using <span class="emphasize">React, TypeScript and Tailwind CSS.</span>',
+      es: '<span class="highlight">Ingeniero Frontend Senior</span> desarrollando software logístico a medida para clientes, usando <span class="emphasize">React, TypeScript y Tailwind CSS.</span>',
+    },
+    subtitle: {
+      en: 'Neurored TMS & SCM, remote (Madrid), Spain',
+      es: 'Neurored TMS & SCM, remoto (Madrid) España',
     },
     type: 'dev',
   },

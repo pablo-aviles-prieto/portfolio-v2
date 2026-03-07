@@ -28,6 +28,8 @@ export const HeroSection = () => {
     });
   }, []);
 
+  const yearsOfExperience = new Date().getFullYear() - 2015;
+
   return (
     <div className='relative h-screen'>
       <div className='waves' />
@@ -43,37 +45,27 @@ export const HeroSection = () => {
           >
             <span className='block'>
               🤗 {language === 'es' ? 'Hola, soy' : `Hi there, I'm`}{' '}
-              <span className='font-bold text-muted-shady-red-0'>
-                Pablo Avilés
-              </span>
-              ,{' '}
+              <span className='font-bold text-muted-shady-red-0'>Pablo Avilés</span>,{' '}
               <span className='italic font-bold text-bright-color-2'>
-                {language === 'es'
-                  ? 'desarrollador full-stack'
-                  : `full-stack developer!`}
+                {language === 'es' ? 'desarrollador full-stack' : `full-stack developer!`}
               </span>
               👋
             </span>
             <span className='block'>
-              {language === 'es'
-                ? 'Estuve trabajando en el'
-                : `I've been working in the`}{' '}
+              {language === 'es' ? 'Estuve trabajando en el' : `I've been working in the`}{' '}
               <span className='italic font-bold text-bright-color-2'>
                 {language === 'es' ? 'mundo IT' : `IT world`}
               </span>{' '}
               {language === 'es' ? `durante más de` : `for more than`}{' '}
               <span className='italic font-bold text-bright-color-2'>
-                {language === 'es' ? `6 años.` : `6 years.`}
+                {language === 'es' ? `${yearsOfExperience} años.` : `${yearsOfExperience} years.`}
               </span>
             </span>
             {language === 'es'
               ? `Completamente centrado en el desarrollo web.`
               : `Now completely focused on web development.`}
           </p>
-          <div
-            ref={socialNetworkRef}
-            className='w-full lg:w-[435px] xl:w-[500px] ml-auto pt-2'
-          >
+          <div ref={socialNetworkRef} className='w-full lg:w-[435px] xl:w-[500px] ml-auto pt-2'>
             <SocialNetworks />
           </div>
         </div>
