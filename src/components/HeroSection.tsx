@@ -47,14 +47,14 @@ export const HeroSection = () => {
               🤗 {language === 'es' ? 'Hola, soy' : `Hi there, I'm`}{' '}
               <span className='font-bold text-muted-shady-red-0'>Pablo Avilés</span>,{' '}
               <span className='italic font-bold text-bright-color-2'>
-                {language === 'es' ? 'desarrollador full-stack' : `full-stack developer!`}
-              </span>
+                {language === 'es' ? 'desarrollador full-stack!' : `full-stack developer!`}
+              </span>{' '}
               👋
             </span>
             <span className='block'>
-              {language === 'es' ? 'Estuve trabajando en el' : `I've been working in the`}{' '}
+              {language === 'es' ? 'Estuve trabajando en la' : `I've been working in the`}{' '}
               <span className='italic font-bold text-bright-color-2'>
-                {language === 'es' ? 'mundo IT' : `IT world`}
+                {language === 'es' ? 'industria IT' : `IT industry`}
               </span>{' '}
               {language === 'es' ? `durante más de` : `for more than`}{' '}
               <span className='italic font-bold text-bright-color-2'>
