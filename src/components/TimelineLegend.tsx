@@ -16,7 +16,7 @@ export const TimelineLegend = () => {
       </div>
       <div className='flex items-center gap-2 bg-'>
         <div className='w-5 h-5 bg-indigo-800 border-2 border-black rounded-full sm:w-6 sm:h-6' />
-        <p>{language === 'es' ? 'Desarrollador' : `Developer`}</p>
+        <p>{language === 'es' ? 'Desarrollo' : `Development`}</p>
       </div>
     </div>
   );
