@@ -4,15 +4,17 @@ ARG VITE_MAIL_SERVICE_ID
 ARG VITE_MAIL_TEMPLATE_ID
 ARG VITE_MAIL_PUBLICK_KEY
 
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
 RUN mkdir -p /home/app
 WORKDIR /home/app
 
-COPY package*.json .
+COPY package.json pnpm-lock.yaml ./
 
-RUN npm ci
+RUN pnpm install --frozen-lockfile
 
 COPY . .
 
-RUN npm run build
+RUN pnpm run build
 
-CMD ["npm", "run", "preview"]
+CMD ["pnpm", "run", "preview"]
