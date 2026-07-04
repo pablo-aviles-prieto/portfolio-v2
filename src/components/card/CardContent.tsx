@@ -67,7 +67,7 @@ export const CardContent = ({ work }: Props) => {
             )}
           </div>
           {work.website && (
-            <a href={work.website} target='_blank' rel='noopener noreferrer'>
+            <a href={work.website} target='_blank' rel='noopener'>
               <Web className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
             </a>
           )}
