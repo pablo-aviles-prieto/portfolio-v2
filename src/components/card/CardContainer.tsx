@@ -3,16 +3,17 @@ import { useEffect, useRef } from 'react';
 import { prevWorks } from '../../utils/const';
 import { CardContent } from './CardContent';
 
+const config = {
+  proximity: 40,
+  spread: 80,
+  blur: 20,
+  gap: 32,
+  vertical: false,
+  opacity: 0,
+};
+
 export const CardContainer = () => {
   const containerRef = useRef<any>(null);
-  const config = {
-    proximity: 40,
-    spread: 80,
-    blur: 20,
-    gap: 32,
-    vertical: false,
-    opacity: 0,
-  };
 
   useEffect(() => {
     const container = containerRef.current;
@@ -36,9 +37,7 @@ export const CardContainer = () => {
           cardBounds.top + cardBounds.height * 0.5,
         ];
         let angle =
-          (Math.atan2(event?.y - cardCenter[1], event?.x - cardCenter[0]) *
-            180) /
-          Math.PI;
+          (Math.atan2(event?.y - cardCenter[1], event?.x - cardCenter[0]) * 180) / Math.PI;
         angle = angle < 0 ? angle + 360 : angle;
         card.style.setProperty('--start', angle + 90);
       }
@@ -50,21 +49,18 @@ export const CardContainer = () => {
       container.style.setProperty('--gap', config.gap);
       container.style.setProperty('--blur', config.blur);
       container.style.setProperty('--spread', config.spread);
-      container.style.setProperty(
-        '--direction',
-        config.vertical ? 'column' : 'row'
-      );
+      container.style.setProperty('--direction', config.vertical ? 'column' : 'row');
     };
     restyle();
 
     return () => {
       document.removeEventListener('pointermove', update);
     };
-  }, [config]);
+  }, []);
 
   return (
     <div ref={containerRef} className='container-glow'>
-      {prevWorks.map((work) => (
+      {prevWorks.map(work => (
         <CardContent key={work.title} work={work} />
       ))}
     </div>

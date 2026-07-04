@@ -34,7 +34,7 @@ export const CardContent = ({ work }: Props) => {
             {work.title}
           </p>
           <div className='flex items-center justify-center mb-4 gap-x-4'>
-            {work.techs.map((tech) => {
+            {work.techs.map(tech => {
               const TechIcon = techs[tech as keyof typeof techs];
               return <TechIcon key={tech} className='w-7 h-7' />;
             })}
@@ -43,31 +43,25 @@ export const CardContent = ({ work }: Props) => {
             {language === 'en' ? work.descriptionEn : work.descriptionEs}{' '}
             {work.subDescriptionEn && (
               <span className='text-xs italic'>
-                *
-                {language === 'en'
-                  ? work.subDescriptionEn
-                  : work.subDescriptionEs}
+                *{language === 'en' ? work.subDescriptionEn : work.subDescriptionEs}
               </span>
             )}
           </p>
         </div>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-2'>
-            <a
-              title={work.github2 ? 'Frontend repo' : 'Repository'}
-              href={work.github}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Github className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
-            </a>
-            {work.github2 && (
+            {work.github && (
               <a
-                title='Backend repo'
-                href={work.github2}
+                title={work.github2 ? 'Frontend repo' : 'Repository'}
+                href={work.github}
                 target='_blank'
                 rel='noopener noreferrer'
               >
+                <Github className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
+              </a>
+            )}
+            {work.github2 && (
+              <a title='Backend repo' href={work.github2} target='_blank' rel='noopener noreferrer'>
                 <Github className='w-8 h-8 cursor-pointer hover:text-vibrant-orange-1' />
               </a>
             )}

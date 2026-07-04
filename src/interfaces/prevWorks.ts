@@ -8,7 +8,7 @@ export type PrevWork = {
   descriptionEs: string;
   subDescriptionEs?: string;
   techs: Array<keyof typeof techs>;
-  github: string;
+  github?: string;
   github2?: string;
   website?: string;
 };

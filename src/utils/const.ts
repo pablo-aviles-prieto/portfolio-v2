@@ -161,6 +161,16 @@ export const TIMELINE_BORDER = 4;
 
 export const prevWorks: PrevWork[] = [
   {
+    title: 'Coste Hipoteca',
+    image: 'coste-hipoteca.webp',
+    descriptionEn: 'Check your mortgage costs with ease in Spain',
+    subDescriptionEn: 'Only available in spanish at the moment',
+    descriptionEs: 'Comprueba los costes de tu hipoteca con facilidad en España',
+    subDescriptionEs: 'Solamente disponible en español',
+    techs: ['nextjs', 'typescript', 'tailwind'],
+    website: 'https://www.costehipoteca.com/',
+  },
+  {
     title: 'Expense Tracker',
     image: 'expense-tracker.webp',
     descriptionEn: 'Manage your transactions and subscriptions with ease',
