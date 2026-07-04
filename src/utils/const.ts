@@ -124,14 +124,26 @@ export const timelineData = [
     type: 'dev',
   },
   {
-    year: '2025\n\r-\n\rPresent',
+    year: '2025\n\r-\n\r2026',
     text: {
-      en: '<span class="highlight">Senior Frontend Engineer</span> building custom logistic software for clients, using <span class="emphasize">React, TypeScript and Tailwind CSS.</span>',
-      es: '<span class="highlight">Ingeniero Frontend Senior</span> desarrollando software logístico a medida para clientes, usando <span class="emphasize">React, TypeScript y Tailwind CSS.</span>',
+      en: '<span class="highlight">Senior Frontend Engineer</span> building <span class="emphasize">data-driven logistics and transportation platforms</span> with React, TypeScript, and modern frontend architecture.',
+      es: '<span class="highlight">Ingeniero Frontend Senior</span> desarrollando <span class="emphasize">plataformas logísticas y de transporte basadas en datos</span> con React, TypeScript y una arquitectura frontend moderna.',
     },
     subtitle: {
       en: 'Neurored TMS & SCM, remote (Madrid), Spain',
       es: 'Neurored TMS & SCM, remoto (Madrid) España',
+    },
+    type: 'dev',
+  },
+  {
+    year: '2026\n\r-\n\rPresent',
+    text: {
+      en: '<span class="highlight">Senior Frontend Engineer</span> building <span class="emphasize">large-scale hospitality web platforms</span> with Next.js, TypeScript, and modern frontend architecture.',
+      es: '<span class="highlight">Ingeniero Frontend Senior</span> desarrollando <span class="emphasize">plataformas web de gran escala para el sector hotelero</span> con Next.js, TypeScript y una arquitectura frontend moderna.',
+    },
+    subtitle: {
+      en: 'Plexus Tech, remote (Stgo Compostela), Spain',
+      es: 'Plexus Tech, remoto (Stgo Compostela) España',
     },
     type: 'dev',
   },
